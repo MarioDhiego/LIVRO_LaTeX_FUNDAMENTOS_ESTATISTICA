@@ -1,0 +1,155 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%     Language Science Press Master File       %%%
+%%%         follow the instructions below        %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+% Everything following a % is ignored
+% Some lines start with %. Remove the % to include them
+
+\documentclass[output=book, 
+  modfonts 
+		  ]{langscibook}    
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%          additional packages                 %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% put all additional commands you need in the 
+% following files. {I}f you do not know what this might 
+% mean, you can safely ignore this section
+
+\usepackage{subcaption}
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localhyphenation.tex}
+\bibliography{localbibliography} 
+\usepackage{trivfloat}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Personal Commands                %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+% Definição de alguns símbolos usados com freqüência
+\renewcommand{\Re}{I \! \! R}
+\newcommand{\ini}{\noindent}
+\newcommand{\inic}{\hspace{5.5mm}}
+\newcommand{\vsu}{\vspace{1cm}}
+\newcommand{\vsm}{\vspace{.5cm}}
+\newcommand{\vst}{\vspace*{3mm}}
+\newcommand{\vsmm}{\vspace{-.5cm}}
+\newcommand{\vsmu}{\vspace{-1cm}}
+\newcommand{\hsu}{\hspace{1cm}}
+\newcommand{\hsm}{\hspace{.5cm}}
+\newcommand{\hsmm}{\hspace{-.5cm}}
+\newcommand{\hsmu}{\hspace*{-1cm}}
+
+\newcommand{\bff}[1]{\boldsymbol{#1}}
+\newcommand{\thetab}{\bff{\theta}}
+\newcommand{\mub}{\bff{\mu}}
+\newcommand{\etab}{\bff{\eta}}
+\newcommand{\taub}{\bff{\tau}}
+\newcommand{\zetab}{\bff{\zeta}}
+\newcommand{\psib}{\bff{\psi}}
+\newcommand{\Sigmab}{\bff{\Sigma}}
+\newcommand{\Deltab}{\bff{\Delta}}
+\newcommand{\umb}{\bff{1}}
+\newcommand{\zb}{\bff{0}}
+\newcommand{\ub}{\bff{u}}
+\newcommand{\Ub}{\bff{U}}
+%\newcommand{\Ib}{\bff{I}}
+\newcommand{\Ib}{\bff{\mathcal{I}}}
+\newcommand{\Hb}{\bff{H}}
+\newcommand{\hb}{\bff{h}}
+\newcommand{\Jb}{\bff{J}}
+\newcommand{\Kb}{\bff{K}}
+\newcommand{\Lb}{\bff{L}}
+\newcommand{\Ab}{\bff{A}}
+\newcommand{\vb}{\bff{v}}
+\newcommand{\Vb}{\bff{V}}
+\newcommand{\Db}{\bff{D}}
+\newcommand{\Eb}{\bff{E}}
+\newcommand{\Fb}{\bff{F}}
+\newcommand{\fb}{\bff{f}}
+\newcommand{\Rb}{\bff{R}}
+\newcommand{\rb}{\bff{r}}
+
+\renewcommand{\bar}[1]{\overline{#1}}
+\renewcommand{\tilde}[1]{\widetilde{#1}}
+
+\newcommand{\n}{\nonumber}
+\newcommand{\bdot}{\bff{.}}
+
+\newcommand{\beq}{\begin{eqnarray}}
+\newcommand{\eeq}{\end{eqnarray}}
+
+\newcommand{\beqq}{\begin{eqnarray*}}
+\newcommand{\eeqq}{\end{eqnarray*}}
+
+\trivfloat{quadro}
+\floatstyle{plaintop} % Forçar posição da legenda para o topo
+\restylefloat{quadro} % Forçar posição da legenda para o topo
+\renewcommand{\listquadroname}{Lista de Quadros} % Forçar texto na Lista de Quadros
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Frontmatter                      %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{document}     
+\input{localcommands.tex} 
+ 
+
+\maketitle                
+\frontmatter
+% %% uncomment if you have preface and/or acknowledgements
+
+\currentpdfbookmark{Contents}{name} % adds a PDF bookmark
+\tableofcontents
+\include{chapters/prefacio}
+% \include{chapters/acknowledgments}
+% \include{chapters/abbreviations} 
+\mainmatter         
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Chapters                         %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\setcounter{chapter}{0} \include{chapters/Cap1L}  
+\setcounter{chapter}{1} \include{chapters/Cap2L}
+\setcounter{chapter}{2} \include{chapters/Cap3L}
+\setcounter{chapter}{3} \include{chapters/Cap4L}
+\setcounter{chapter}{4} \include{chapters/Cap5L}
+\setcounter{chapter}{5} \include{chapters/Cap6L}
+%\setcounter{chapter}{6} \include{chapters/Cap7L}
+%\setcounter{chapter}{6} \include{chapters/Cap7L}
+%\setcounter{chapter}{7} \include{chapters/Cap8L}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Backmatter                       %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{localseealso.tex} 
+% There is normally no need to change the backmatter section
+\input{backmatter.tex} 
+\end{document} 
+
+% you can create your book by running
+% xelatex main.tex
+%
+% you can also try a simple 
+% make
+% on the commandline
