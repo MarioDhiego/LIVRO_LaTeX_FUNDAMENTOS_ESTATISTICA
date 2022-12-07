@@ -156,26 +156,29 @@
 \section{Principais Distribuições de Probabilidade}
  
  
-\inic Uma distribuição de probabilidade é um modelo matemático que relaciona um certo valor da variável aleatória em estudo com a sua probabilidade de ocorrência.
+\inic Uma distribuição de probabilidade é um modelo matemático que relaciona um certo valor da variável aleatória em estudo com a sua probabilidade de ocorrência. De conformidade com a natureza da variável aleatória, a distribuição pode ser classificada em discreta ou contínua.
  
- \section{Distribuição Binomial}
+\subsection{Distribuição Binomial}
+\inic È uma distribuição discreta, cuja função de probabilidade é:
  
- \inic È uma distribuição discreta, cuja função de probabilidade é:
+\begin{equation}
+f(y) = C_{n}^{y}p^{y}q^{n-y}
+\end{equation}
  
- \begin{equation}
-     f(y) = C_{n}^{y}p^{y}q^{n-y}
- \end{equation}
+Sendo: \vskip0.3cm
+
+\begin{itemize}
+\item $p$ = probabilidade de realização do contecimento favorável; 
+\item  $q$ = probabilidade de ralização do acontecimento contrário;  
+\item $y$ = número de vezes que se realiza o acontecimento favorável;  
+\item $n$ = número de tentativas; 
+\item $C_{n}^{y}$ = números de combinações de n elementos, tomados y a y; 
+\end{itemize} 
+
  
 
- \inic p = probabilidade de realização do contecimento favorável; \\
- \inic q = probabilidade de ralização do acontecimento contrário;  \\
- \inic y = número de vezes que se realiza o acontecimento favorável; \\ 
- \inic n = número de tentativas; \\
- \inic $ C_{n}^{y}$ = números de combinações de n elementos, tomados y a y; 
- 
- %\newpage
- 
-  \section{Distribuição de Poisson}
+\newpage
+\subsection{Distribuição de Poisson}
   
 \inic A distribuição de Poisson é adequada para descrever as probabilidades do número de ocorrências num intervalo contínuo (em geral tempo ou espaço). São exemplos de variáveis que podem ter como modelo
 a distribuição de Poisson:
@@ -196,10 +199,13 @@ Ainda, as falhas não são contáveis. Por exemplo, não é possível contar os 
 
 onde:
 
-\inic $e$: é a base do logaritmo natural;
-\inic $k$: quantidade de ocorrências num intervalo contínuo;
-\inic $k!$: é o fatorial de $k$; 
-\inic $\lambda$: é um número real que representa a taxa de ocorrência. Por exemplo, se o evento ocorre a uma média de 4 minutos e estamos interessados no número de eventos que ocorrem num intervalo de 10 minutos, $\lambda={10}/{4}=2.5$
+\begin{itemize}
+\item $e$: é a base do logaritmo natural ou neperiano;
+\item $k$: quantidade de ocorrências num intervalo contínuo;
+\item $k!$: é o fatorial de $k$; 
+\item $\lambda$: é um número real que representa a taxa de ocorrência. Por exemplo, se o evento ocorre a uma média de 4 minutos e estamos interessados no número de eventos que ocorrem num intervalo de 10 minutos, $\lambda={10}/{4}=2.5$
+\end{itemize}
+
   
 Além disso, temos que o valor esperado e a variância serão: 
 
@@ -210,8 +216,10 @@ Var\left(X\right) = \lambda
 \end{aligned}
 $$
  
- 
-\section{Distribuição Normal}
+
+
+\newpage
+\subsection{Distribuição Normal}
 
 \inic Quando os valores das observações de uma variável resposta, originados de uma amostra, são agrupados em tabelas de frequências, objetiva-se conhecer a variação e como se processa a distribuição dos dados.\vskip0.3cm 
 
@@ -223,22 +231,100 @@ f\left(x\right) = \frac{1}{\sqrt{2\pi \sigma^2}}exp \left\{-\frac{1}{2}\left(\fr
  \end{equation}
 
 
-\section{Distribuição Qui-Quadrado $\chi^{2}$}
+
+\newpage
+\subsection{Distribuição Qui-Quadrado $\chi^{2}$}
 
 \inic A variável aleatória $\chi^{2}$, denominada quiquadrado com $k$ graus de liberdade, é definida como a soma de k quadrados de normais padronizadas e independentes. 
 
 
+\newpage
+\subsection{Distribuição $t$ de $Student$}
+\subsubsection{A Origem da $t$ $student$}
 
-\section{Distribuição $t$ de $Student$}
+William Sealy Gosset nasceu em 13 de junho de 1876 em Canterbury, Inglaterra, o primeiro de cinco filhos do Coronel Frederic Gosset e Agnes Sealy Vidal. Ele tinha problemas de visão e não conseguia seguir seu pai na Royal Engineers, mas ele era um aluno muito bom e ganhou várias bolsas de estudo.\vskip0.3cm
+
+
+Ao final do século XIX, a famosa \textbf{Arthur Guinness Son and Company} era a maior cervejaria do mundo, e foi pioneira em diversos esforços para o Controle de Qualidade. Em 1899, um dos contratados para o cargo de químico, recém-formado na Universidade de Oxford, com 23 anos de idade e um currículo que combinava matemática e estatística, foi \textbf{William Sealy Gosset}.\vskip0.3cm
+
+%\begin{figure}[!htb]
+%\centering{
+% \includegraphics[scale=0.5]{figures/Gosset2.png}\\
+%  \vspace{-0.8cm}
+%  \caption{William Sealy Gosset, 1908}\label{esquematabela1}}
+%\end{figure}
+
+
+A Guinness era uma empresa de Agro-Química progressista e Gosset iria aplicar os seus conhecimentos de estatística tanto na cervejaria (a destilaria) como nas quintas, para a selecção dos melhores espécimens de cevada.\vskip0.3cm
+
+O trabalho de Gosset na Guinness consistia em medir os inúmeros fatores do processo de produção e ponderar como eles se relacionam aos resultados do produto final. William realizou muitos testes para estimar a duração da cerveja diante das diferentes condições de armazenagem, fabricação e transporte.\vskip0.3cm
+
+
+Gosset desenvolveu o teste t, distribuição passível de ser tabulada, como um modo barato de monitorar a qualidade da cerveja. Na época, não existia uma teoria para a tomada de decisões com base em pequenas amostras. Por isso, o grande diferencial desse teste é justamente permitir que se façam inferências usando um menor número de elementos. \vskip0.3cm
+
+Um outro funcionário da Guinness tinha já publicado um trabalho que continha alguns segredos da Cervejeira Guinness. Para prevenir fugas de informação e futuras revelações dos "segredos" da marca, a Guinness proibiu que os seus empregados pudessem publicar quaisquer trabalhos independentemente do conteúdo. Isto queria dizer que Gosset não tinha como publicar os trabalhos com o seu nome. Então, usou o pseudonimo $Student$ para as suas publicações evitando ser detectado pela entidade empregadora. \vskip0.3cm
+
+\newpage
+Desta forma, o seu feito mais conhecido, é hoje conhecido com a Distribuição t-Student, que noutras circunstâncias seria conhecida como a Distribuição t-Gosset.\vskip0.3cm
+
+
+Gosset trabalhou na cervejaria em St. James's Gate por 36 anos, antes de se tornar o cervejeiro-chefe de uma nova cervejaria Guinness em Park Royal em Londres.\vskip0.3cm
+
+Em outubro de 2012, uma placa foi inaugurada na Escola Nacional de St Patrick, Blackrock(Irlanda), para homenagear William Sealy Gosset, que morou nas proximidades por 22 anos. \vskip0.3cm
+
+Sir \textbf{Ronald Fisher}, um gigante entre os estatísticos, chamou Gosset de “O Faraday das Estatísticas”, reconhecendo sua capacidade de compreender princípios gerais e aplicá-los a problemas de importância prática.
+
+
+
+\subsubsection{A Distribuição $t$ }
+
+Seja a variável aleatória:
 
 \begin{equation}
-f\left(x\right)=\frac{1}{\sqrt{\upsilon \pi}}\frac{\Gamma\left(\frac{\upsilon+1}{2}\right) }{\Gamma \left(\frac{\upsilon}{2}\right)}\left(1+\frac{x^2}{\upsilon}\right)^{-\left(\frac{\upsilon+1}{2}\right)},~~~-\infty<x<\infty
+    t =\frac{\overline{y}-\overline{Y}}{\frac{s(Y)}{\sqrt(n)}}
+\end{equation}
+
+Esta variável é conhecida com distribuição $t$ student, com $k=n-1$ graus de liberdade, podendo também ser escrita na forma:
+
+\begin{equation}
+    t =\frac{N(0,1)}{\sqrt{\frac{\chi^{2}_{n-1}}{n-1}}}
+\end{equation}
+
+O $s(y)$ é considerado o desvio-padrão estimado.\vskip0.3cm
+
+O gráfico da função densidade da variável $t$ de student é simétrico e tem uma forma parecida com a distribuição normal, entretando, menos achatada, com a média zero e variância igual $\frac{k}{(k-2)}$, em que $k>2$ graus de liberdade. A função densidade da variável $t$ é dada pela expressão (2.10). 
+
+\begin{equation}
+f\left(t\right)=\frac{1}{\sqrt{k \pi}}\frac{\Gamma\left(\frac{k+1}{2}\right) }{\Gamma \left(\frac{k}{2}\right)}\left(1+\frac{t^2}{k}\right)^{-\left(\frac{\upsilon+1}{2}\right)},~~~-\infty<x<\infty
 \end{equation}
 
 
-\section{Distribuição F de Snedecor}
 
 
+
+
+
+
+
+
+
+
+
+\newpage
+\subsection{Distribuição F de Snedecor}
+
+
+
+
+
+
+A Estatística \textbf{F de Snedecor} é definida como a razão de duas variáveis independentes com distribuição $\chi^{2}$, ou seja:
+
+\begin{equation}
+    F_{k,p}=\frac{\frac{\chi^{2}_{k}}{k}}{\frac{\chi^{2}_{p}}{p}}
+\end{equation}
+
+O valor $k$ é o número de graus de liberdade do numerador e o $p$ é o número de graus de liberdade do denominador. A função densidade da distribuição F de Snedecor é dada pela Equação (2.9).
 
 
  
