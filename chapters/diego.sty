@@ -1,0 +1,617 @@
+
+
+%  ****************************************
+%  *           PARAGRAPHING               *
+%  ****************************************
+%
+\parskip 0pt plus .25pt
+\parindent 1em
+\partopsep 2pt plus 1pt minus 1pt
+%
+% The following page-breaking penalties are defined
+%
+\@lowpenalty   51
+\@medpenalty  151
+\@highpenalty 301
+\@beginparpenalty -\@lowpenalty
+\@endparpenalty   -\@lowpenalty
+\@itempenalty     -\@lowpenalty
+%
+\clubpenalty=0         % 'Club line'  at bottom of page.
+\widowpenalty=10000    % 'Widow line' at top of page.
+% \displaywidowpenalty % Math display widow line.
+% \predisplaypenalty   % Breaking before a math display.
+% \postdisplaypenalty  % Breaking after a math display.
+% \interlinepenalty    % Breaking at a line within a paragraph.
+% \brokenpenalty       % Breaking after a hyphenated line.
+%
+\def\thin@rule{{\parindent0pt\par\rule{\textwidth}{0.5pt}\par}}
+\def\thick@rule{{\parindent0pt\par\rule{\textwidth}{1pt}\par}}
+
+%    ****************************************
+%    *        CHAPTERS AND SECTIONS         *
+%    ****************************************
+%
+% DEFINE COUNTERS:
+%
+
+
+%    ****************************************
+%    *                 PARTS                *
+%    ****************************************
+%
+\def\part{%
+  \cleardoublepage
+  \thispagestyle{empty}%
+  \if@twocolumn
+    \onecolumn \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  \secdef\@part\@spart
+}
+%
+% Heading for the \part command.
+%
+\def\@part[#1]#2{%
+  \ifnum \c@secnumdepth >-2\relax
+    \refstepcounter{part}%
+    \addcontentsline{toc}{part}{\thepart \hspace{1em}#1}%
+    \typeout{PART \number\c@part.}%
+  \else
+    \addcontentsline{toc}{part}{#1}%
+  \fi
+  \markboth{}{}%
+  \vspace*{-17pt}%
+  \vbox{\thin@rule\par
+    \parindent 0pt \centering
+    \vskip 17pt%
+    \ifnum \c@secnumdepth >\m@ne
+      \normalfont PART \thepart\par
+    \else
+      \normalfont \phantom{PART \thepart}\par
+    \fi
+    \vskip 17pt%
+    \LARGE \bfseries #1\par
+    \nobreak
+    \addvspace{-4pt}%
+    \thick@rule
+    \vskip 25pt}%
+  \@endpart
+}
+%
+% Heading for the \part* command.
+%
+\def\@spart#1{%
+  \vspace*{-17pt}%
+  \vbox{\thin@rule\par
+    \parindent 0pt \centering
+    \vskip 17pt%
+    \normalfont\phantom{PART \thepart}\par
+    \vskip 17pt%
+    \LARGE \bfseries #1\par
+    \nobreak
+    \addvspace{-4pt}%
+    \thick@rule
+    \vskip 25pt}%
+  \@endpart
+}
+%
+% \@endpart finishes the part page.
+%
+\def\@endpart{%
+  \vfil\newpage
+  \if@twoside
+    \hbox{}%
+    \thispagestyle{empty}%
+    \newpage
+  \fi
+  \if@tempswa \twocolumn\fi
+}
+
+%    ****************************************
+%    *               CHAPTERS               *
+%    ****************************************
+%
+% Chapter text macros
+%
+\newif\if@chptxt
+\newbox\@chptxtbox
+%
+\def\chaptertext{\global\@chptxttrue\global\setbox\@chptxtbox=\vbox\bgroup%
+    \hsize=\textwidth\normalfont\small\noindent\ignorespaces}
+\def\endchaptertext{\egroup}
+%
+% Heading for the \chapter command.  % A biololagem começa aqui
+%
+\def\@makechapterhead#1{%
+  \vspace*{-17pt}%
+  \vbox{\thin@rule \par      % \thin@rule é a linha de cima
+
+    \parindent 0pt \centering
+    \vskip 17pt%
+    \ifnum \c@secnumdepth >\m@ne
+      \LARGE\normalfont \@chapapp{} \thechapter\par   % com o \bf o no. do capítulo fica em negrito
+    \else
+      \LARGE\normalfont \phantom{\@chapapp{} \thechapter}\par % com o \bf o no. do capítulo fica em negrito
+    \fi
+    \vskip 17pt%
+    \huge \bfseries #1\par
+    \nobreak
+    %
+    \addvspace{-4pt}%
+    \thick@rule  % \thick@rule é a linha de baixo
+    \if@chptxt
+      \addvspace{24pt plus 2pt}\unvbox\@chptxtbox
+      \addvspace{6pt}\global\@chptxtfalse
+    \else
+      \vskip 23.5pt%  espaço entre a linha de baixo e o texto - antes era 60
+    \fi}%
+}
+
+
+
+%
+% Heading for the \chapter* command.
+%
+\def\@makeschapterhead#1{%
+  \vspace*{-17pt}%
+  \vbox{\thin@rule\par
+    \parindent 0pt \centering
+    \vskip 17pt%
+    \normalfont\phantom{\@chapapp{} \thechapter}\par
+    \vskip 17pt%
+    \huge \bf #1\par
+    \nobreak
+    \addvspace{-4pt}%
+    \thick@rule
+    \if@chptxt
+      \addvspace{24pt plus 2pt}\unvbox\@chptxtbox
+      \addvspace{6pt}\global\@chptxtfalse
+    \else
+      \vskip 23.5pt%
+    \fi}%
+}
+%
+% \secdef{UNSTARCMDS}{STARCMDS} :
+%
+\def\chapter{%
+  \cleardoublepage
+  \thispagestyle{empty}%fancyplain % se tirar isso ele muda. Como?
+  \global\@topnum\z@
+  \@afterindentfalse
+  \secdef\@chapter\@schapter
+}
+%
+\def\@chapter[#1]#2{%
+  \ifnum \c@secnumdepth >\m@ne
+    \refstepcounter{chapter}
+    \typeout{\@chapapp\space\thechapter.} %
+    \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
+  \else
+    \addcontentsline{toc}{chapter}{#1}%
+  \fi
+  \chaptermark{#1}%
+  \addtocontents{lof}{\protect\addvspace{10pt}}%
+  \addtocontents{lot}{\protect\addvspace{10pt}}%
+  \if@twocolumn
+    \@topnewpage[\@makechapterhead{#2}]%
+  \else
+    \@makechapterhead{#2}\@afterheading
+  \fi
+}
+%
+\def\@schapter#1{%
+  \chaptermark{#1}%
+  \addtocontents{lof}{\protect\addvspace{10pt}}%
+  \addtocontents{lot}{\protect\addvspace{10pt}}%
+  \if@nocntentry
+  \else
+    \addcontentsline{toc}{chapter}{#1}%
+  \fi
+  \if@twocolumn
+    \@topnewpage[\@makeschapterhead{#1}]%
+  \else
+    \@makeschapterhead{#1}\@afterheading
+  \fi
+}
+
+
+
+
+
+% TABLEOFCONTENTS
+%
+\newif\if@nocntentry
+%
+\def\tableofcontents{\@restonecolfalse
+  \if@twocolumn
+    \@restonecoltrue\onecolumn
+  \fi
+  \@nocntentrytrue
+  \chapter*{SUMÁRIO}%
+  \@nocntentryfalse
+% \@mkboth{ÍNDICE}{ÍNDICE}%
+  \@starttoc{toc}%
+  \if@restonecol\twocolumn\fi
+}
+
+\def\l@chapter#1#2{\pagebreak[3]
+   \vskip 12pt plus 1pt
+   \@tempdima 1.5em
+   \begingroup
+     \parindent \z@
+     \rightskip \@pnumwidth
+     \parfillskip -\@pnumwidth
+     \bf \leavevmode
+     \advance\leftskip\@tempdima
+     \hskip -\leftskip
+     {\raggedright #1}\nobreak
+     \hfil \nobreak\hbox to\@pnumwidth{\hss #2}\par
+   \endgroup}
+%
+\let\l@part=\l@chapter
+%
+\def\l@section      {\@dottedtocline{1}{15.0pt}{22.5pt}}
+\def\l@subsection   {\@dottedtocline{2}{37.5pt}{30.0pt}}
+\def\l@subsubsection{\@dottedtocline{3}{67.5pt}{20.0pt}}
+\def\l@paragraph    {\@dottedtocline{4}{87.5pt}{20.0pt}}
+\def\l@subparagraph {\@dottedtocline{5}{107.5pt}{20.0pt}}
+%
+% The default width of TOC entries for sections in CHAPMAN.STY
+% will only cater for sections with numbers up to 10.9. Numbers larger
+% than this result in the section number leaving no space between the
+% number and the title.
+%
+% This can be fixed by placing the \widetocentries command before
+% the \tableofcontents command (but after the \documentstyle line).
+%
+\def\widetocentries{%
+  \def\l@section      {\@dottedtocline{1}{15.0pt}{27.5pt}}%
+  \def\l@subsection   {\@dottedtocline{2}{42.5pt}{40.0pt}}%
+  \def\l@subsubsection{\@dottedtocline{3}{82.5pt}{20.0pt}}%
+  \def\l@paragraph    {\@dottedtocline{4}{102.5pt}{20.0pt}}%
+  \def\l@subparagraph {\@dottedtocline{5}{120.5pt}{20.0pt}}%
+}
+%
+% LIST OF FIGURES
+%
+\def\listoffigures{\@restonecolfalse
+ \if@twocolumn \@restonecoltrue\onecolumn \fi
+ \chapter*{LISTA DE FIGURAS}
+% \@mkboth{LISTA DE FIGURAS}{LISTA DE FIGURAS}
+ \@starttoc{lof}
+ \if@restonecol \twocolumn \fi
+}
+\def\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
+%
+% LIST OF TABLES
+%
+\def\listoftables{\@restonecolfalse
+ \if@twocolumn \@restonecoltrue \onecolumn \fi
+ \chapter*{LISTA DE TABELAS}
+% \@mkboth{LISTA DE TABELAS}{LISTA DE TABELAS}
+ \@starttoc{lot}
+ \if@restonecol \twocolumn\fi
+}
+\let\l@table\l@figure
+
+%    ****************************************
+%    *             BIBLIOGRAPHY             *
+%    ****************************************
+%
+\newcounter{dummy}
+%
+\def\thebibliography#1{%
+  \chapter*{BIBLIOGRAFIA}
+% \@mkboth{BIBLIOGRAFIA}{BIBLIOGRAFIA}
+  \typeout{References.}
+  \list{}{\labelwidth\z@
+    \leftmargin 1em
+    \itemsep \z@ plus .1pt
+    \itemindent-\leftmargin
+  \usecounter{dummy}}
+  \normalsize       %\small%
+  \parindent\z@
+  \parskip\z@ plus .1pt\relax
+  \def\newblock{\hskip .11em plus .33em minus .07em}
+  \sloppy\clubpenalty4000\widowpenalty4000
+  \sfcode`\.=1000\relax
+}
+
+\let\endthebibliography=\endlist
+
+ \def\@biblabel#1{[#1]\hfill}
+ \def\@cite#1{[#1]}
+
+%    ****************************************
+%    *              THE INDEX               *
+%    ****************************************
+%
+% The theindex, theauthorindex and thesubjectindex environment's
+%
+\newif\if@restonecol
+\newif\if@royalflag
+
+\def\theindex{\the@index{Index}}
+\def\endtheindex{\par\endthe@index}
+\def\theauthorindex{\the@index{Author index}}
+\def\endtheauthorindex{\par\endthe@index}
+\def\thesubjectindex{\the@index{Subject index}}
+\def\endthesubjectindex{\par\endthe@index}
+
+\def\the@index#1{\@restonecoltrue\if@twocolumn\@restonecolfalse\fi
+ \columnseprule \z@
+ \columnsep 1pc%
+ \twocolumn[\vspace*{11pt}\@makeschapterhead{#1}]%
+ \if@royalflag % If royal 1 or 2 is in use
+   \@mkboth{#1}{#1}%
+ \else
+   \@mkboth{\uppercase{#1}}{\uppercase{#1}}%
+ \fi
+ \typeout{#1.}%
+ \addcontentsline{toc}{chapter}{#1}%
+ \thispagestyle{empty}%
+ \parindent\z@
+ \parskip\z@ plus .3pt%
+ \small\raggedright
+ \relax
+ \let\item\@idxitem
+}
+
+\def\endthe@index{\if@restonecol\onecolumn\else\clearpage\fi}
+
+\def\@idxitem{\par\hangindent 10pt}
+\def\subitem{\par\hangindent 20pt \hspace*{10pt}}
+\def\subsubitem{\par\hangindent 30pt \hspace*{20pt}}
+\def\indexspace{\par\vskip 16pt plus 2pt minus 2pt\relax}
+
+
+%    ****************************************
+%    *             FOOTNOTES                *
+%    ****************************************
+%
+\newskip\@footindent
+\@footindent=1em
+
+\def\footnoterule{\kern-3\p@ \hrule width 0\columnwidth \kern 2.6\p@}
+
+\@addtoreset{footnote}{chapter}
+
+\long\def\@makefntext#1{\@setpar{\@@par\@tempdima \hsize
+ \advance\@tempdima-\@footindent
+ \parshape \@ne \@footindent \@tempdima}\par
+ \noindent \hbox to \z@{\hss$^{\@thefnmark}$\ }#1}
+
+\renewcommand{\thefootnote}{\mbox{{$\fnsymbol{footnote}$}}}
+
+\def\@fnsymbol#1{\ifcase#1\or * \or \dagger\or \ddagger\or
+   \S{}\or \P{}\or \|\or **\or \dagger\dagger
+   \or \ddagger\ddagger \or \S{}\S{}\or \P{}\P{}\else\@ctrerr\fi\relax}
+
+
+%    ****************************************
+%    *         FIGURES AND TABLES           *
+%    ****************************************
+%
+% Float placement parameters.
+%
+\setcounter{topnumber}{2}
+\def\topfraction{.9}
+\setcounter{bottomnumber}{2}
+\def\bottomfraction{.5}
+\setcounter{totalnumber}{4}
+\def\textfraction{.1}
+\def\floatpagefraction{.8}
+\setcounter{dbltopnumber}{2}
+\def\dbltopfraction{.9}
+\def\dblfloatpagefraction{.8}
+%
+% \@makecaption{NUMBER}{TEXT} : Macro to make a figure or table caption.
+%
+\long\def\@makecaption#1#2{%
+   \vskip 10pt%
+   \setbox\@tempboxa\hbox{\normalsize \normalfont #1\enskip \itshape #2}%
+   \ifdim \wd\@tempboxa >\hsize
+       \normalsize \normalfont #1\enskip \itshape #2\par
+     \else
+       \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+   \fi%
+}
+%
+
+%
+%
+%    ****************************************
+%    *                TITLE                 *
+%    ****************************************
+%
+% TITLEPAGE
+%
+\def\titlepage{\@restonecolfalse
+ \if@twocolumn \@restonecoltrue\onecolumn
+         \else \newpage
+ \fi
+ \thispagestyle{empty}
+}
+\def\endtitlepage{\if@restonecol\twocolumn \else \newpage \fi}
+%
+\def\maketitle{\begin{titlepage}
+  \let\footnotesize\small
+  \let\footnoterule\relax
+  \setcounter{page}{1}
+  \null
+  \vspace*{-17pt}%
+  {\parindent 0pt \centering
+   \par
+   \LARGE \bfseries \@title
+   \par
+   \nobreak
+   \vskip 0pt
+   \thick@rule
+   \vskip 25pt
+   \par
+   \large \normalfont
+   \begin{tabular}[t]{c}
+     \@author
+   \end{tabular}\par
+  }
+  \vfill
+  \@thanks
+  \null
+ \end{titlepage}
+ \setcounter{footnote}{0}
+ \let\thanks\relax
+ \gdef\@thanks{}
+ \gdef\@author{}
+ \gdef\@title{}
+ \let\maketitle\relax
+}
+
+%    ****************************************
+%    *            PAGE STYLES               *
+%    ****************************************
+%
+% Initializes TeX's marks
+%
+\mark{{}{}}
+%
+% \ps@empty and \ps@plain defined in LATEX.TEX
+%
+% Definition of 'headings' page style
+%
+\def\ps@headings{\let\@mkboth\markboth
+ \def\@oddhead{\footnotesize\normalfont \rightmark \hfill \thepage}
+ \def\@oddfoot{}
+ \def\@evenhead{\footnotesize\normalfont \thepage \hfill \leftmark}
+ \def\@evenfoot{}
+ \def\chaptermark##1{\markboth {\uppercase{##1}}{\uppercase{##1}}}
+ \def\sectionmark##1{\markright{\uppercase{##1}}}
+}
+%
+% Definition of 'myheadings' page style.
+%
+\def\ps@myheadings{\let\@mkboth\@gobbletwo
+ \def\@oddhead{\footnotesize\normalfont \rightmark \hfill \thepage}
+ \def\@oddfoot{}
+ \def\@evenhead{\footnotesize\normalfont\thepage \hfill \leftmark}
+ \def\@evenfoot{}
+ \def\chaptermark##1{}
+% \def\sectionmark##1{}
+% \def\subsectionmark##1{}
+}
+
+%    ****************************************
+%    *            MISCELLANEOUS             *
+%    ****************************************
+%
+% DATE
+%
+\def\today{\ifcase\month\or
+  January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or December\fi
+  \space\number\day, \number\year}
+%
+% EQUATION and EQNARRAY -- put here because it must follow \chapter definition
+%
+\@addtoreset{equation}{chapter}
+\def\theequation{\thechapter.\arabic{equation}}
+% \jot = 3pt % Extra space added between lines of an eqnarray environment
+
+%    ****************************************
+%    *            CUP SPECIALS              *
+%    ****************************************
+%
+% cleardoublepage with empty page
+%
+\def\cleardoublepage{\clearpage
+ \if@twoside \ifodd \c@page
+             \else  \thispagestyle{empty}
+                    \hbox{}\newpage
+                    \if@twocolumn \thispagestyle{plain}\hbox{}\newpage
+                    \fi
+             \fi
+ \fi}
+%
+% redefinition of sections to get en space after chapter number
+%
+\def\@sect#1#2#3#4#5#6[#7]#8{%
+ \ifnum #2>\c@secnumdepth
+  \def\@svsec{}%
+ \else
+  \refstepcounter{#1}
+%  \ifnum #2>1
+%   \edef\@svsec{{\normalfont \csname the#1\endcsname\hskip 0.5em}}
+%  \else
+   \edef\@svsec{\csname the#1\endcsname\hskip 0.5em}
+%  \fi
+ \fi
+ \@tempskipa #5\relax
+ \ifdim \@tempskipa>\z@
+  \begingroup #6\relax
+   \@hangfrom{\hskip #3\relax\@svsec}{\interlinepenalty \@M #8\par}
+  \endgroup
+  \csname #1mark\endcsname{#7}%
+  \addcontentsline{toc}{#1}{\ifnum #2>\c@secnumdepth \else
+   \protect\numberline{\csname the#1\endcsname}\fi #7}
+ \else
+  \def\@svsechd{#6\hskip #3\@svsec #8\csname #1mark\endcsname
+    {#7}\addcontentsline{toc}{#1}{\ifnum #2>\c@secnumdepth \else
+      \protect\numberline{\csname the#1\endcsname}\fi#7}}%
+ \fi
+ \@xsect{#5}}
+%
+% redefinition of \hline to get extra space
+%
+\def\hline{\noalign{\ifnum0=`}\fi \vskip 6pt
+ \hrule \@height \arrayrulewidth \vskip 6pt
+ \futurelet \@tempa\@xhline}
+\def\@xhline{\ifx\@tempa\hline \vskip -12pt
+ \vskip \doublerulesep \fi \ifnum0=`{\fi}}
+%
+% redefinition of tabular to get rid of vertical lines in tables
+%
+\def\tabular{\def\@halignto{}
+ \def\hline{\noalign{\ifnum0=`}\fi
+  \vskip 3pt
+  \hrule \@height \arrayrulewidth
+  \vskip 3pt
+  \futurelet \@tempa\@xhline}
+ \def\@xhline{\ifx\@tempa\hline
+   \vskip -6pt
+   \vskip \doublerulesep
+  \fi
+  \ifnum0=`{\fi}}
+  \def\@arrayrule{\@addtopreamble{\hskip -.5\arrayrulewidth
+%                                  \vrule \@width \arrayrulewidth
+                                  \hskip .5\arrayrulewidth}}
+\@tabular
+}
+
+\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
+\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\DeclareRobustCommand{\cal}{\@fontswitch{\relax}{\mathcal}}
+\DeclareRobustCommand{\mit}{\@fontswitch{\relax}{\mathnormal}}
+
+\RequirePackage{latexsym}
+
+
+%    ****************************************
+%    *           INITIALIZATION             *
+%    ****************************************
+%
+% Default initializations
+\ps@headings
+\pagenumbering{arabic}
+\onecolumn
+\frenchspacing
+\flushbottom
+\endinput
+
+
+%  *************   Final de diego.sty   ****************

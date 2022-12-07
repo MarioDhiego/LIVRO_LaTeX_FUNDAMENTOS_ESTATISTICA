@@ -9,7 +9,17 @@
 % Some lines start with %. Remove the % to include them
 
 \documentclass[output=book,modfonts]{langscibook}    
-  
+
+
+ 
+% Definindo o rodape das pa}ginas
+%\setlength{\footrulewidth}{0.4pt}
+%
+%\lfoot{VALENTE, M.D.R}
+%\cfoot{}%\thepage
+%\rfoot{DETRAN-PA/UFPA}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                              %%%
 %%%          additional packages                 %%%
@@ -21,11 +31,20 @@
 % mean, you can safely ignore this section
 
 \usepackage{subcaption}
+\usepackage{graphicx}
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localhyphenation.tex}
 \bibliography{localbibliography} 
 \usepackage{trivfloat}
+\usepackage{amsmath,amsfonts,amsthm}
+
+%\usepackage[dvips]{graphicx}
+%\usepackage{rotating}          
+%\usepackage{diego} % modifica o estilo dos capitulos
+%\usepackage{boxedminipage}
+%\usepackage{fancyheadings}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                              %%%
