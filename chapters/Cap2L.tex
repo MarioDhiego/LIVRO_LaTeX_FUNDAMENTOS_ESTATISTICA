@@ -1,4 +1,4 @@
-\chapter{Teoria das Probabilidades}
+\chapter{Fundmentos Sobre Teoria das Probabilidades}
 \section{Introdução}
 
 \inic A teoria dos conjuntos é a parte da matemática que trata das propriedades dos conjuntos, tendo sua origem nos trabalhos do matemático \textbf{Georg Ferdinand Ludwig Philipp Cantor(1845-1918)}, e se baseia na idéia de definir conjunto como uma noção primitiva. Algumas Vezes chamada de teoria ingênua ou intuitiva devido a descoberta de vários antinomias (ou paradoxos) relacionados a definição de conjunto.\vskip0.3cm
@@ -819,7 +819,16 @@ $k=2,3,...,n$:
 \inic Uma distribuição de probabilidade é um modelo matemático que relaciona um certo valor da variável aleatória em estudo com a sua probabilidade de ocorrência. De conformidade com a natureza da variável aleatória, a distribuição pode ser classificada em discreta ou contínua.
  
 \subsection{Distribuição Binomial}
-\inic È uma distribuição discreta, cuja função de probabilidade é:
+
+Os princípios básicos da distribuição binomial foram desenvolvidos pelo matemático suíço durante o século XVII chamado \textbf{Jakob Bernoulli}, que fez muitas contribuições à teoria da probabilidade. Foi o autor do que é geralmente conhecido como o primeiro livro dedicado à probabilidade, publicado em 1713.\vskip0.3cm
+
+Em homenagem a Jakob, os ensaios utilizando probabilidade binomial, na maioria das vezes são denominados \textbf{Ensaios de Bernoulli}, e uma sequência desse tipo de ensaios é denominado de \textbf{Processo de Bernoulli} \vskip0.3cm
+
+
+A distribuição Binomial dá a probabilidade de deterninado desfecho ocorrer em determinado número de ensaios independentes. \vskip0.3cm
+
+
+\inic A distribuição Binomial é uma distribuição discreta, cuja função de probabilidade é:
  
 \begin{equation}
 f(y) = C_{n}^{y}p^{y}q^{n-y}
@@ -835,19 +844,41 @@ Sendo: \vskip0.3cm
 \item $C_{n}^{y}$ = números de combinações de n elementos, tomados y a y; 
 \end{itemize} 
 
- 
 
+
+
+ 
 \newpage
 \subsection{Distribuição de Poisson}
+
+A distribuição de Poisson tem este nome em homenagem ao metemático, Astrônomo e físico francês \textbf{Simeon Denis Poisson}. Com característica próxima a Binomial, a distribuição de Poisson é uma distribuição descontínua, aplicável quando o resultado é o número de vezes que determinado evento ocorre. \vskip0.3cm
+
+Poisson recebeu dois prêmios importantes da época:
+
+\begin{itemize}
+    \item \textbf{Prêmio Lalande} (1810) Membro da Academia Americana de Artes e Ciências;
+    \item \textbf{Medalha Copley} (For his work entitled, Nouvelle Theorie de lAction Capillaire., 1832)
+\end{itemize}
+
+O Prêmio Lalande foi uma condecoração científica em Astronomia, concedida de 1902 a 1970 pela Académie des Sciences. O prêmio homenageia o astrônomo Jérôme Lalande, estabelecido pelo próprio em 1801. Após 1970 foi combinado com o prêmio da fundação Benjamin Valz, concedido até 1996.\vskip0.3cm
+
+
+A Medalha Copley é um prêmio no domínio das ciências, sendo
+a de maior prestígio atribuída pela \textbf{Royal Society} e, também, a mais antiga. Foi concedida pela primeira vez em 1731.\vskip0.3cm
+
+
   
-\inic A distribuição de Poisson é adequada para descrever as probabilidades do número de ocorrências num intervalo contínuo (em geral tempo ou espaço). São exemplos de variáveis que podem ter como modelo
-a distribuição de Poisson:
+\inic A distribuição de Poisson é adequada para descrever as probabilidades do número de ocorrências num intervalo contínuo (em geral tempo ou espaço). São exemplos de variáveis que podem ter como modelo a distribuição de Poisson:
 
 \begin{enumerate}
     \item Acidentes com automóveis em uma determinada estrada;
     \item Quantidade de pacientes que chegam num pronto socorro durante a madrugada;
+    \item  Número de leitos necessários em centro de tratamento intensivo;
+    \item  Número de Policiais Militares ou Agentes de Trânsito, necessários em um quadro de distribuição de modo a assegurar a disponibilidade de recursos adequados;
 \end{enumerate}
- 
+
+
+\newpage 
 \inic Note que a quantidade de valores possíveis que a variável aleatória pode assumir é infinita, entretanto enumerável. Além disso, observe que a variável aleatória é discreta (número de ocorrências), no entanto a unidade de medida é contínua (tempo, área).\vskip0.3cm
 
 Ainda, as falhas não são contáveis. Por exemplo, não é possível contar os acidentes que não ocorreram em um dia, nem tão pouco a quantidade de pacientes que não chegaram ao pronto socorro na madrugada.
