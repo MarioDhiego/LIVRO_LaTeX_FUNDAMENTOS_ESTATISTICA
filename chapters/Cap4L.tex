@@ -927,18 +927,20 @@ para as variáveis categóricas X e Y, com s e r categorias, respectivamente, co
     \caption{Esquema Geral de Tabela Bidimensional}
     \label{Bidimensional}
     \vspace{0.2cm}
-\begin{tabular}{l|c|c|c|c|c}
+\begin{tabular}{c|c|c|c|c|c|c|c|c}
   \hline\hline
-                     &  \multicolumn{4}{c}{Y} \\
-  \cline{2-5}
-  X                  & $Y_{1}$     & $Y_{2}$     & $\ldots$    & $Y_{r}$  & Total \\
+                  &  \multicolumn{6}{c}{Y} \\
+  \cline{2-7}
+  X               & $Y_{1}$     & $Y_{2}$     & $\ldots$  & j        & $\ldots$  & $Y_{r}$  & Total    &  Média \\
   \hline
-  $X_{1}$            & $ n_{11}$   & $ n_{12}$   & $\ldots$    & $n_{1r}$ & $n_{1.}$ \\
-  $X_{2}$            & $ n_{21}$   & $ n_{22}$   & $\ldots$    & $n_{2r}$ & $n_{2.}$  \\
-  $\vdots$           & $\vdots$    & $\vdots$    & $\ldots$    & $\vdots$ & $\vdots$ \\
-  $X_{s}$            & $ n_{s1}$   & $ n_{s2}$   & $\ldots$    & $n_{sr}$ & $n_{s.}$ \\
+  $X_{1}$         & $ n_{11}$   & $ n_{12}$   & $\ldots$  & $\vdots$ & $\ldots$  & $n_{1r}$ & $n_{1+}$ & $\Bar{X}_{1}$\\
+  $X_{2}$         & $ n_{21}$   & $ n_{22}$   & $\ldots$  & $\vdots$ & $\ldots$  & $n_{2r}$ & $n_{2+}$ & $\Bar{X}_{2}$\\
+  $\vdots$        & $\vdots$    & $\vdots$    & $\ldots$  & $\vdots$ & $\ldots$  & $\vdots$ & $\vdots$ & $\vdots$\\
+  i               & $\vdots$    & $\vdots$    & $\ldots$  & $n_{ij}$ & $\ldots$  & $\vdots$ & $\vdots$ & $\vdots$  \\
+  $\vdots$        & $\vdots$    & $\vdots$    & $\ldots$  & $\vdots$ & $\ldots$  & $\vdots$ & $\vdots$ &  $\vdots$\\
+  $X_{k}$         & $ n_{k1}$   & $ n_{k2}$   & $\ldots$  & $\vdots$ & $\ldots$  & $n_{kr}$ & $n_{k+}$ & $\Bar{X}_{k}$ \\
   \hline\hline
-  Total              & $n_{.1}$    & $n_{.2}$    & $\ldots$    & $n_{.r}$ & $n$ \\
+  Total              & $n_{.1}$    & $n_{.2}$    & $\ldots$  & $\vdots$ & $\ldots$  & $n_{.r}$ & $n$      & \\
    \hline\hline
 \end{tabular}}
 \end{table}
