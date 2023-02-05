@@ -214,19 +214,66 @@ uma característica para a amostra em estudo.
 
 
 
-
+\newpage
 \subsection{Média Aritmética Ponderada ($\bar{X}_{p}$)}
 
-As vezes, associam-se os números $x_{1},x_{2},\ldots,x_{n}$ a certos fatores de ponderação ou peso $p_{1},p_{2},\ldots,p_{n}$ que dependem dosignificado ou importância atribuída aos números. Neste caso
- a média aritmética será calculada pela fórmula:
+Seja $x$ uma variável que assume valores $x_{1},x_{2},\ldots,x_{n}$ com frequências absolutas respectivamente igual a $p_{1},p_{2},\ldots,p_{n}$. A média aritmética ponderada de $x$ é  definida como a divisão da soma de todos os produtos $x_{i} n_{i}(1,2,...,k)$ pela soma das frequências. Aplicando a equação \ref{media1}, temos que
+
+
+$$
+\Bar{x}_{1}=\frac{x_{11},x_{12},\ldots, x_{1_{n_{1}}}}{n_{1}}
+$$
+
+$$
+\Bar{x}_{2}=\frac{x_{21},x_{22},\ldots, x_{2_{n_{2}}}}{n_{2}}
+$$
+
+$$
+\ldots
+$$
+
+$$
+\Bar{x}_{k}=\frac{x_{k1},x_{k2},\ldots, x_{k_{n_{k}}}}{n_{k}}
+$$
+
+com isso, 
+
+$$
+p_{1}\Bar{x}_{1}=x_{11},x_{12},\ldots, x_{1_{p_{1}}}
+$$
+
+$$
+p_{2}\Bar{x}_{2}=x_{21},x_{22},\ldots, x_{2_{p_{2}}}
+$$
+
+$$
+\ldots
+$$
+
+$$
+p_{k}\Bar{x}_{k}=x_{k1},x_{k2},\ldots, x_{k_{p_{k}}}
+$$
+
+Assim, a média aritmética de todos os números é:
+
+$$
+\Bar{x}=\frac{(x_{11},x_{12}+\ldots+x_{1_{n_{1}}})+(x_{21}+x_{22}+\ldots+x_{2_{n_{2}}})+(x_{k_{1}}+x_{k_{2}}+\ldots+x_{k_{n_{k}}})}{p_{1}+p_{2}+\ldots+p_{k}}
+$$
+
+
+logo a expressão é equivalente a
 
 \begin{equation}\label{media}
-    \bar{X}=\frac{x_{1}p_{1}+x_{2}p_{2}+\ldots+x_{n}p_{n}}{p_{1}+P_{2}+\ldots+p_{n}}=\frac{\sum_{i=1}^{n}x_{i}p_{i}}{\sum_{i=1}^{n}p_{i}}
+    \bar{X}= \frac{(p_{1}\Bar{x}_{1})+(p_{2}\Bar{x}_{2})+\ldots+(p_{k}\Bar{x}_{k})}{p_{1}+p_{2}+\ldots+p_{k}}=\frac{\sum_{i=1}^{n}x_{i}p_{i}}{\sum_{i=1}^{n}p_{i}}
 \end{equation}
 
-onde, $p_{i}$ é o peso da amostra $x_{i}$
 
 
+
+
+
+
+\newpage
 \subsection{Propriedades da Média Aritmética}
 
 A média aritmética possui as seguintes propriedades (SILVA, 2011), (SPIGEL et al, 2013), (IEZZY et al, 2013) e (Bussab e Morettin 2017). 
