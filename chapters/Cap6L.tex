@@ -306,7 +306,7 @@ de um conjunto de dados por uma constante, média aritimética fica multiplicada
 
 Sejam $x_{1}, x_{2},...,x_{n}$ os valores assumidos por uma variável $x$ e $\Bar{x}$ a média aritmética correspondente. Se a cada $(x_{i}=1,2,...,n)$, adiciornar uma \textbf{constante real c}, a média aritmética fica adicionada de \textbf{c} unidades.\vskip0.3cm
 
-Considera-se que os novos valores assumidos por essa variável sejam: $x_{1}+c,x_{2}+c,...,x_{n}+c$, a nova média é dada por:
+Considera-se que os novos valores assumidos por essa variável sejam: $(x_{1}+c),(x_{2}+c),...,(x_{n}+c)$, a nova média é dada por:
 
 \begin{equation}\label{media3}
      \bar{X}= \frac{\sum_{i=1}^{n}(x_{i}+c)}{n}=\frac{(x_{1}+c)+(x_{2}+c)+...+(x_{n}+c)}{n} 
@@ -384,12 +384,21 @@ tem lógica adicionar valores da amostra, é o de média harmónica.\vskip0.3cm
 Onde a média harmônica dá mais importância aos valores menores da distribuição, e não é definida, quando pelo menos um valor da série for nulo.\vskip0.3cm
 
 
-A média harmônica de um conjunto de números $X_{1},X_{2},\ldots,X_{N}$ é a recíproca da média
+A média harmônica de um conjunto de números $x_{1},x_{2},\ldots,x_{n}$ é a inverso da média
 aritmética das recíprocas dos números, ou seja,
 
-\begin{equation}\label{harmonica}
-    H=\frac{n}{\frac{1}{X_{1}}+\frac{1}{X_{2}}+\ldots+\frac{1}{X_{n}}}=\frac{1}{\frac{1}{N}\sum_{i=1}^{n}\frac{1}{X_{i}}}
-    \end{equation}
+
+\begin{equation}\label{harmonica1}
+H=(\frac{(\frac{1}{x_{1}})+(\frac{1}{x_{2}})+\ldots+(\frac{1}{x_{n}})}{n})^{-1}
+\end{equation}
+
+\begin{equation*}\label{harmonica1}
+ =(\frac{n}{\frac{1}{X_{1}}+\frac{1}{X_{2}}+\ldots+\frac{1}{X_{n}}})
+\end{equation*}
+
+\begin{equation*}\label{harmonica}
+=\frac{1}{\frac{1}{N}\sum_{i=1}^{n}\frac{1}{X_{i}}}
+\end{equation*}
 
 \subsection{Média Harmônica Ponderada ($\bar{X}_{HP})$}
 
