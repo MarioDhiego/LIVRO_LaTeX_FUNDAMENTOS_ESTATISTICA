@@ -208,7 +208,7 @@ uma característica para a amostra em estudo.
 
 
 
-\begin{equation}\label{media}
+\begin{equation}\label{media1}
      \bar{X}=\frac{x_{1}+x_{2}+\ldots+x_{n}}{n}=\frac{\sum_{i=1}^{n}x_{i}}{n}
 \end{equation}
 
@@ -229,31 +229,57 @@ onde, $p_{i}$ é o peso da amostra $x_{i}$
 
 \subsection{Propriedades da Média Aritmética}
 
-\inic A média aritmética possui as seguintes propriedades (SILVA, 2011) e (SPIGEL et al, 2013). 
-
+A média aritmética possui as seguintes propriedades (SILVA, 2011), (SPIGEL et al, 2013), (IEZZY et al, 2013) e (Bussab e Morettin 2017). 
 
 \begin{enumerate}
-  \item [{a)}] A média aritmética é um valor contido entre o menor e o maior valor observado; 
- \item [{b)}] A soma algébrica dos desvios de um conjunto de números em relação a média e sempre zero.\vskip0.3cm
+\item [{A)}] A média aritmética de uma \textbf{constante} é a própria constante.
+
+Sejam  $x_{1}=b, x_{2}=b, ..., x_{n}=b$, por definição da média aritimética conforme a equação \ref{media1} tem-se que: $x_{1}=x_{2}=,..., x_{n}=b$, então a expressão \ref{media1} equivale a
+
+\begin{equation}\label{propriedade1}
+\bar{x}=\frac{b+b+...+b}{n}=\frac{nb}{n}=b
+\end{equation}
+ 
+
+\item [{B)}] A média aritmética é um valor contido entre o menor e o maior valor observado; 
+\item [{C)}] A soma algébrica dos desvios de um conjunto de números em relação a média e sempre zero.\vskip0.3cm
 Quando se trabalha com dados brutos.
 $$ \sum_{i=1}^{n}(x_{i}-\bar{X})=0 $$
 Quando se trabalha com dados tabulados.
 $$ \sum_{i=1}^{n}f_{i}[(x_{i}-\bar{X})]=0 $$
-\item [{C)}] A soma dos quadrados dos desvios de um conjunto de números , em relação a qualquer número a, e um mínimo quando a=média e somente neste caso.\vskip0.3cm
+\item [{D)}] A soma dos quadrados dos desvios de um conjunto de números , em relação a qualquer número a, e um mínimo quando a=média e somente neste caso.\vskip0.3cm
 Quando se trabalha com dados brutos.
 $$ \sum_{i=1}^{n}(x_{i}- a)= Minimo  $$
 Quando se trabalha com dados tabulados.
 $$ \sum_{i=1}^{n}f_{i}[(x_{i}- a)]= Minimo  $$
-  \item [{D)}] Multiplicando-se (ou dividindo-se) todos os elementos
+  \item [{E)}] Multiplicando-se (ou dividindo-se) todos os elementos
 de um conjunto de dados por uma constante, média aritimética fica multiplicada ou dividida por essa constante;
-\item [{E)}] Somando-se (ou subtraindo-se) uma constante positiva de todos os elementos de um conjunto de dados, a média aritmética fica aumentada (ou diminuída) dessa constante;
-\item [{F)}]multiplicando-se todas as frequâncias de uma distribuição por uma constante positiva, a média aritmética não se autera; 
+\item [{F)}] Somando-se (ou subtraindo-se) uma constante positiva de todos os elementos de um conjunto de dados, a média aritmética fica aumentada (ou diminuída) dessa constante;
+
+
+Sejam $x_{1}, x_{2},...,x_{n}$ os valores assumidos por uma variável $x$ e $\Bar{x}$ a média aritmética correspondente. Se a cada $(x_{i}=1,2,...,n)$, adiciornar uma \textbf{constante real c}, a média aritmética fica adicionada de \textbf{c} unidades.\vskip0.3cm
+
+Considera-se que os novos valores assumidos por essa variável sejam: $x_{1}+c,x_{2}+c,...,x_{n}+c$, a nova média é dada por:
+
+\begin{equation}\label{media3}
+     \bar{X}= \frac{\sum_{i=1}^{n}(x_{i}+c)}{n}=\frac{(x_{1}+c)+(x_{2}+c)+...+(x_{n}+c)}{n} 
+\end{equation}
+
+\begin{equation*}\label{media4}
+  =\frac{(x_{1})+(x_{2})+...+(x_{n})}{n}+\frac{c+c+...+c}{n}+\frac{\sum_{i=1}^{n}}{n}=\frac{nc}{c}
+\end{equation*}
+
+isto é, 
+
+$$\Bar{x}^{'}=\Bar{x}+c$$
+
+\item [{G)}]multiplicando-se todas as frequâncias de uma distribuição por uma constante positiva, a média aritmética não se autera; 
 \end{enumerate}
 
 \subsection{Média Artimética(Dados Tabelados)}
 
 
-\begin{equation}\label{media}
+\begin{equation}\label{media2}
      \bar{X}= \frac{x_{1}f_{1}+x_{2}f_{2}+\ldots+x_{n}f_{n}}{n} = \frac{\sum_{i=1}^{n}f_{i}x_{i}}{\sum_{i=1}^{n}f_{i}}
 \end{equation}
 
