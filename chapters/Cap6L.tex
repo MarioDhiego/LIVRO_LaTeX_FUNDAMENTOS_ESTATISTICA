@@ -281,6 +281,9 @@ A média aritmética possui as seguintes propriedades (SILVA, 2011), (SPIGEL et 
 \begin{enumerate}
 \item [{A)}] A média aritmética de uma \textbf{constante} é a própria constante.
 
+\vskip0.3cm
+\textbf{Provar para} constante $c$: 
+
 Sejam  $x_{1}=b, x_{2}=b, ..., x_{n}=b$, por definição da média aritimética conforme a equação \ref{media1} tem-se que: $x_{1}=x_{2}=,..., x_{n}=b$, então a expressão \ref{media1} equivale a
 
 \begin{equation}\label{propriedade1}
@@ -289,6 +292,104 @@ Sejam  $x_{1}=b, x_{2}=b, ..., x_{n}=b$, por definição da média aritimética 
  
 
 \item [{B)}] A média aritmética é um valor contido entre o menor e o maior valor observado; 
+
+\vskip0.3cm
+\textbf{Provar para} $x_{i} \leq \Bar{x}$: 
+
+Seja a sequência de números reais $x_{1},x_{2},x_{i},x_{j},\ldots,x_{n}$ com $x_{i}$= mínimo da sequência e $x_{n}$= máximo da sequência. \vskip0.3cm
+
+Pela definição da equação \ref{media1}, $x_{i}$ é o mínimo da sequência, então 
+
+\begin{equation}\label{propriedade1}
+x_{i}+x_{i}+x_{i}+\ldots+x_{i} \leq  x_{1}+x_{2}+x_{3}+\ldots+x_{n}
+\end{equation}
+
+Devido,
+
+\begin{equation}\label{propriedade1}
+x_{1}+x_{2}+x_{3}+\ldots+x_{n}=n \Bar{x}
+\end{equation}
+
+Logo, a expressão
+
+\begin{equation}\label{propriedade1}
+x_{i}+x_{i}+x_{i}+\ldots+x_{i} \leq n \Bar{x}
+\end{equation}
+
+que é equivalente a 
+
+\begin{equation}\label{propriedade1}
+\frac{x_{i}+x_{i}+x_{i}+\ldots+x_{i}}{n} \leq \Bar{x}
+\end{equation}
+
+que equivale a 
+
+\begin{equation}\label{propriedade1}
+\frac{nx_{i}}{n} \leq \Bar{x}
+\end{equation}
+
+Logo,
+
+\begin{equation}\label{propriedade1}
+x_{i} \leq \Bar{x}
+\end{equation}
+
+Portanto, a média aritmética é maior ou igual que o mínimo da sequência.
+
+
+
+\vskip0.3cm
+\textbf{Provar para} $x_{n} \geq  \Bar{x}$: 
+
+
+Seja a sequência de números reais $x_{1},x_{2},x_{i},x_{j},\ldots,x_{n}$ com $x_{i}$= mínimo da sequência e $x_{n}$= máximo da sequência. \vskip0.3cm
+
+Pela definição da equação \ref{media1}, $x_{i}$ é o máximo da sequência, então 
+
+\begin{equation}\label{propriedade1}
+x_{i}+x_{i}+x_{i}+\ldots+x_{i} \geq  x_{1}+x_{2}+x_{3}+\ldots+x_{n}
+\end{equation}
+
+Devido,
+
+\begin{equation}\label{propriedade1}
+x_{1}+x_{2}+x_{3}+\ldots+x_{n}=n \Bar{x}
+\end{equation}
+
+Logo, a expressão
+
+\begin{equation}\label{propriedade1}
+x_{i}+x_{i}+x_{i}+\ldots+x_{i} \geq n \Bar{x}
+\end{equation}
+
+que é equivalente a 
+
+\begin{equation}\label{propriedade1}
+\frac{x_{i}+x_{i}+x_{i}+\ldots+x_{i}}{n} \geq \Bar{x}
+\end{equation}
+
+que equivale a 
+
+\begin{equation}\label{propriedade1}
+\frac{nx_{n}}{n} \geq \Bar{x}
+\end{equation}
+
+Logo,
+
+\begin{equation}\label{propriedade1}
+x_{n} \geq \Bar{x}
+\end{equation}
+
+Portanto, a média aritmética é menor ou igual que o máximo da sequência.
+
+
+
+
+
+
+
+
+
 \item [{C)}] A soma algébrica dos desvios de um conjunto de números em relação a média e sempre zero.\vskip0.3cm
 Quando se trabalha com dados brutos.
 $$ \sum_{i=1}^{n}(x_{i}-\bar{X})=0 $$
@@ -313,7 +414,7 @@ Considera-se que os novos valores assumidos por essa variável sejam: $(x_{1}+c)
 \end{equation}
 
 \begin{equation*}\label{media4}
-  =\frac{(x_{1})+(x_{2})+...+(x_{n})}{n}+\frac{c+c+...+c}{n}+\frac{\sum_{i=1}^{n}}{n}=\frac{nc}{c}
+  =\frac{(x_{1})+(x_{2})+...+(x_{n})}{n}+ \overbrace{\frac{c+c+...+c}{n}}^{n}+\frac{\sum_{i=1}^{n}}{n}=\frac{nc}{c}
 \end{equation*}
 
 isto é, 
