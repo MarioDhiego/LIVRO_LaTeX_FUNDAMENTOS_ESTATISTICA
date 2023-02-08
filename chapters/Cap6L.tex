@@ -229,7 +229,7 @@ $$
 $$
 
 $$
-\ldots
+\vdots
 $$
 
 $$
@@ -247,7 +247,7 @@ p_{2}\Bar{x}_{2}=x_{21},x_{22},\ldots, x_{2_{p_{2}}}
 $$
 
 $$
-\ldots
+\vdots
 $$
 
 $$
@@ -282,7 +282,7 @@ A média aritmética possui as seguintes propriedades (SILVA, 2011), (SPIGEL et 
 \item [{A)}] A média aritmética de uma \textbf{constante} é a própria constante.
 
 \vskip0.3cm
-\textbf{Provar para constante} $c$: 
+\textbf{\fbox{Provar para constante $c$:}} 
 
 Sejam  $x_{1}=b, x_{2}=b, ..., x_{n}=b$, por definição da média aritimética conforme a equação \ref{media1} tem-se que: $x_{1}=x_{2}=,..., x_{n}=b$, então a expressão \ref{media1} equivale a
 
@@ -294,7 +294,7 @@ Sejam  $x_{1}=b, x_{2}=b, ..., x_{n}=b$, por definição da média aritimética 
 \item [{B)}] A média aritmética é um valor contido entre o menor e o maior valor observado; 
 
 \vskip0.3cm
-\textbf{Provar para} $x_{i} \leq \Bar{x}$: 
+\textbf{\fbox{Provar para $x_{i} \leq \Bar{x}:$}} 
 
 Seja a sequência de números reais $x_{1},x_{2},x_{i},x_{j},\ldots,x_{n}$ com $x_{i}$= mínimo da sequência e $x_{n}$= máximo da sequência. \vskip0.3cm
 
@@ -339,8 +339,8 @@ Portanto, a média aritmética é maior ou igual que o mínimo da sequência.
 
 
 \vskip0.3cm
-\textbf{Provar para} $x_{n} \geq  \Bar{x}$: 
-
+\textbf{\fbox{Provar para $x_{n} \geq  \Bar{x}:}}$
+\vskip0.3cm
 
 Seja a sequência de números reais $x_{1},x_{2},x_{i},x_{j},\ldots,x_{n}$ com $x_{i}$= mínimo da sequência e $x_{n}$= máximo da sequência. \vskip0.3cm
 
@@ -384,7 +384,7 @@ Portanto, a média aritmética é menor ou igual que o máximo da sequência.
 
 
 
-\item [{C)}] A soma algébrica dos desvios de um conjunto de números em relação a média e sempre zero.\vskip0.3cm
+\item [{C)}] A soma algébrica dos desvios de um conjunto de números em relação a média é sempre zero.\vskip0.3cm
 
 Quando se trabalha com dados brutos.
 $$ \sum_{i=1}^{n}(x_{i}-\bar{X})=0 $$
@@ -395,7 +395,7 @@ $$ \sum_{i=1}^{n}f_{i}[(x_{i}-\bar{X})]=0 $$
 
 
 
-\textbf{Provar para Dados Brutos}: 
+\textbf{\fbox{Provar para Dados Brutos:}} 
 \vskip0.3cm
 
 Seja a sequência  $x_{1}+x_{2}+x_{3}+\ldots+x_{n}$ de média aritmética $\Bar{x}$, então o desvio $d_{i}$ do elemento $x_{i}$, com $1=1,2,3,\ldots,n$ é dado por $d_{i}=x_{i}-\Bar{x}$.
@@ -404,41 +404,111 @@ Seja a sequência  $x_{1}+x_{2}+x_{3}+\ldots+x_{n}$ de média aritmética $\Bar{
 
 Assim, 
 
-$$=(x_{1}-\Bar{x})+(x_{2}-\Bar{x}_{1})+(x_{3}-\Bar{x}_{2})+\ldots+(x_{n}-\Bar{x}_{n})$$
-$$=(x_{1}+x_{2}+x_{3}+\ldots+x_{n}) - (\Bar{x}_{1}-\Bar{x}_{2}+\Bar{x}_{3}+\ldots+\Bar{x}_{n})$$
-$$=(x_{1}+x_{2}+x_{3}+\ldots+x_{n})-(n\Bar{x})$$
-$$=(x_{1}+x_{2}+x_{3}+\ldots+x_{n})-n\frac{(x_{1}+x_{2}+x_{3}+\ldots+x_{n})}{n}$$
-$$=(x_{1}+x_{2}+x_{3}+\ldots+x_{n})-(x_{1}+x_{2}+x_{3}+\ldots+x_{n})$$
-$$=(x_{1}+x_{2}+x_{3}+\ldots+x_{n})-(x_{1}-x_{2}-x_{3}-\ldots-x_{n})$$
-$$=(x_{1}-x_{1})+(x_{2}-x_{2})+(x_{3}-x_{3})+(\ldots)+(x_{n}-x_{n})$$
-$$=0+0+0+\ldots+0=0$$
+\begin{eqnarray*}
+= & (x_{1}-\Bar{x})+(x_{2}-\Bar{x}_{1})+(x_{3}-\Bar{x}_{2})+\ldots+(x_{n}-\Bar{x}_{n}) \\
+= & (x_{1}+x_{2}+x_{3}+\ldots+x_{n}) - (\Bar{x}_{1}-\Bar{x}_{2}+\Bar{x}_{3}+\ldots+\Bar{x}_{n})\\
+= & (x_{1}+x_{2}+x_{3}+\ldots+x_{n})-(n\Bar{x})\\
+= & (x_{1}+x_{2}+x_{3}+\ldots+x_{n})-n \left(\frac{(x_{1}+x_{2}+x_{3}+\ldots+x_{n})}{n} \right)\\
+= & (x_{1}+x_{2}+x_{3}+\ldots+x_{n})-(x_{1}+x_{2}+x_{3}+\ldots+x_{n})\\
+= & (x_{1}+x_{2}+x_{3}+\ldots+x_{n})-(x_{1}-x_{2}-x_{3}-\ldots-x_{n})\\
+= & (x_{1}-x_{1})+(x_{2}-x_{2})+(x_{3}-x_{3})+(\ldots)+(x_{n}-x_{n})\\
+= & 0+0+0+\ldots+0=0
+\end{eqnarray*}
 
-Nesse contexto, a Soma dos desvios tomados em relação a média aritmética é sempre zero.
+Nesse contexto, a Soma dos desvios tomados em relação a média aritmética é zero.
 
-\item [{D)}] A soma dos quadrados dos desvios de um conjunto de números, em relação a qualquer número $a$, e um mínimo quando a é igual a média e somente neste caso.\vskip0.3cm
+
+
+
+\newpage
+
+\item [{D)}] A soma dos quadrados dos desvios de um conjunto de números, em relação a qualquer número $a$, é um mínimo quando a é igual a média e somente neste caso.\vskip0.3cm
 Quando se trabalha com dados brutos.
 
 $$ \sum_{i=1}^{n}(x_{i}- a)= Minimo  $$
 Quando se trabalha com dados tabulados.
 $$ \sum_{i=1}^{n}f_{i}[(x_{i}- a)]= Minimo  $$
 
-  \item [{E)}] Multiplicando-se (ou dividindo-se) todos os elementos
-de um conjunto de dados por uma constante, média aritimética fica multiplicada ou dividida por essa constante;
+  \item [{E)}] Multiplicando-se (ou Dividindo-se) todos os elementos
+de um conjunto de dados por uma \textbf{constante}, média aritimética fica multiplicada ou dividida por essa constante;
 
+\vskip0.3cm
+\textbf{\fbox{Provar para Multiplicação:}} 
+\vskip0.3cm
+
+Sejam sequência de números reais $x_{1}, x_{2},...,x_{n}$ os valores assumidos por uma variável $x$ e $\Bar{x}$ a média aritmética correspondente. Se a cada $(x_{i}=1,2,...,n)$, multiplicar uma \textbf{constante real c}, a média aritmética fica multiplicada de \textbf{c} unidades.\vskip0.3cm
+
+
+Considera-se que os novos valores assumidos por essa variável sejam: 
+
+$$(c_{1}x_{1}),(c_{2}x_{2}),...,(c_{n}x_{n})$$
+
+a nova média é dada por:
+
+\begin{equation*}\label{media3}
+     \bar{x}=\frac{(c_{1}x_{1})+(c_{2}x{2})+(c_{3}x{3})+\ldots+(c_{n}x{n})}{n} 
+\end{equation*}
+
+\begin{equation*}\label{media3}
+     \bar{x}=\frac{c(x_{1}+x_{2}+x_{3}+\ldots+x_{n})}{n} 
+\end{equation*}
+
+\begin{equation*}\label{media3}
+     \bar{x}=c \left(\frac{(x_{1}+x_{2}+x_{3}+\ldots+x_{n})}{n} \right)
+\end{equation*}
+
+
+\begin{equation*}\label{media3}
+     \bar{x}=c\Bar{x} 
+\end{equation*}
+
+
+
+\vskip0.3cm
+\textbf{\fbox{Provar para Divisão:}} 
+\vskip0.3cm
+
+Sejam sequência de números reais $x_{1}, x_{2},...,x_{n}$ os valores assumidos por uma variável $x$ e $\Bar{x}$ a média aritmética correspondente. Se a cada $(x_{i}=1,2,...,n)$, dividir uma \textbf{constante real c}, a média aritmética fica multiplicada de \textbf{c} unidades.\vskip0.3cm
+
+
+Considera-se que os novos valores assumidos por essa variável sejam: 
+
+$$\left( \frac{x_{1}}{c_{1}} \right), \left( \frac{x_{2}}{c_{2}} \right),..., \left( \frac{x_{n}}{c_{n}}\right)$$
+
+
+a nova média é dada por:
+
+\begin{equation*}\label{media3}
+     \bar{x}= \frac{\left( \frac{x_{1}}{c_{1}} \right)+ \left( \frac{x_{2}}{c_{2}} \right)+ \left( \frac{x_{3}}{c_{3}}\right)+\ldots+\left( \frac{x_{n}}{c_{n}} \right)}{n}
+\end{equation*}
+
+\begin{equation*}\label{media3}
+     \bar{x}= \frac{ \frac{1}{c} \left( x_{1}+x_{2}+x_{3}+\ldots+x_{n} \right)}{n}
+\end{equation*}
+
+\begin{equation*}\label{media3}
+     \bar{x}= \frac{1}{c} \left( \frac{x_{1}+x_{2}+x_{3}+\ldots+x_{n}}{n} \right)
+\end{equation*}
+
+\begin{equation*}\label{media3}
+     \bar{x}= \frac{x}{c_{i}}
+\end{equation*}
+
+Com isso, a média aritmética sofreu a mesma operação que os valores de $x_{i}$.
 
 \item [{F)}] Somando-se (ou subtraindo-se) uma constante positiva de todos os elementos de um conjunto de dados, a média aritmética fica aumentada (ou diminuída) dessa constante;
 
 \vskip0.3cm
-\textbf{Provar para Soma}: 
+\textbf{\fbox{Provar para Soma:}} 
 \vskip0.3cm
 
 Sejam $x_{1}, x_{2},...,x_{n}$ os valores assumidos por uma variável $x$ e $\Bar{x}$ a média aritmética correspondente. Se a cada $(x_{i}=1,2,...,n)$, adiciornar uma \textbf{constante real c}, a média aritmética fica adicionada de \textbf{c} unidades.\vskip0.3cm
 
 Considera-se que os novos valores assumidos por essa variável sejam: $(x_{1}+c),(x_{2}+c),...,(x_{n}+c)$, a nova média é dada por:
 
-\begin{equation}\label{media3}
+\begin{equation*}\label{media3}
      \bar{x}= \frac{\sum_{i=1}^{n}(x_{i}+c)}{n}=\frac{(x_{1}+c)+(x_{2}+c)+...+(x_{n}+c)}{n} 
-\end{equation}
+\end{equation*}
 
 \begin{equation*}\label{media4}
   =\frac{(x_{1})+(x_{2})+...+(x_{n})}{n}+ \overbrace{\frac{c+c+...+c}{n}}^{n}+\frac{\sum_{i=1}^{n}x_{i}}{n}=\frac{nc}{c}
@@ -451,7 +521,7 @@ $$\Bar{x}^{'}=\Bar{x}+c$$
 
 
 \vskip0.3cm
-\textbf{Provar para Subtração}: 
+\textbf{\fbox{Provar para Subtração:}} 
 \vskip0.3cm
 
 Sejam $x_{1}, x_{2},...,x_{n}$ os valores assumidos por uma variável $x$ e $\Bar{x}$ a média aritmética correspondente. Se a cada $(x_{i}=1,2,...,n)$, subtrair uma \textbf{constante real c}, a média aritmética fica adicionada de \textbf{c} unidades.\vskip0.3cm
@@ -474,12 +544,12 @@ $$\Bar{x}^{'}=\Bar{x}-c$$
 
 
 
-\item [{G)}]multiplicando-se todas as frequâncias de uma distribuição por uma constante positiva, a média aritmética não se autera; 
+\item [{G)}]Multiplicando-se todas as frequências de uma distribuição por uma constante positiva, a média aritmética não se autera; 
 \end{enumerate}
 
 
 
-
+%\item[{H)}] 
 
 
 
