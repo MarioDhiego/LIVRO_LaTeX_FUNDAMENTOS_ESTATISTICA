@@ -384,45 +384,113 @@ Portanto, a média aritmética é menor ou igual que o máximo da sequência.
 
 
 
-
-
-
-
-
-
 \item [{C)}] A soma algébrica dos desvios de um conjunto de números em relação a média e sempre zero.\vskip0.3cm
+
 Quando se trabalha com dados brutos.
 $$ \sum_{i=1}^{n}(x_{i}-\bar{X})=0 $$
+
+
 Quando se trabalha com dados tabulados.
 $$ \sum_{i=1}^{n}f_{i}[(x_{i}-\bar{X})]=0 $$
-\item [{D)}] A soma dos quadrados dos desvios de um conjunto de números , em relação a qualquer número a, e um mínimo quando a=média e somente neste caso.\vskip0.3cm
+
+
+
+\textbf{Provar para Dados Brutos}: 
+\vskip0.3cm
+
+Seja a sequência  $x_{1}+x_{2}+x_{3}+\ldots+x_{n}$ de média aritmética $\Bar{x}$, então o desvio $d_{i}$ do elemento $x_{i}$, com $1=1,2,3,\ldots,n$ é dado por $d_{i}=x_{i}-\Bar{x}$.
+\vskip0.3cm
+
+
+Assim, 
+
+$$=(x_{1}-\Bar{x})+(x_{2}-\Bar{x}_{1})+(x_{3}-\Bar{x}_{2})+\ldots+(x_{n}-\Bar{x}_{n})$$
+$$=(x_{1}+x_{2}+x_{3}+\ldots+x_{n}) - (\Bar{x}_{1}-\Bar{x}_{2}+\Bar{x}_{3}+\ldots+\Bar{x}_{n})$$
+$$=(x_{1}+x_{2}+x_{3}+\ldots+x_{n})-(n\Bar{x})$$
+$$=(x_{1}+x_{2}+x_{3}+\ldots+x_{n})-n\frac{(x_{1}+x_{2}+x_{3}+\ldots+x_{n})}{n}$$
+$$=(x_{1}+x_{2}+x_{3}+\ldots+x_{n})-(x_{1}+x_{2}+x_{3}+\ldots+x_{n})$$
+$$=(x_{1}+x_{2}+x_{3}+\ldots+x_{n})-(x_{1}-x_{2}-x_{3}-\ldots-x_{n})$$
+$$=(x_{1}-x_{1})+(x_{2}-x_{2})+(x_{3}-x_{3})+(\ldots)+(x_{n}-x_{n})$$
+$$=0+0+0+\ldots+0=0$$
+
+Nesse contexto, a Soma dos desvios tomados em relação a média aritmética é sempre zero.
+
+\item [{D)}] A soma dos quadrados dos desvios de um conjunto de números, em relação a qualquer número $a$, e um mínimo quando a é igual a média e somente neste caso.\vskip0.3cm
 Quando se trabalha com dados brutos.
+
 $$ \sum_{i=1}^{n}(x_{i}- a)= Minimo  $$
 Quando se trabalha com dados tabulados.
 $$ \sum_{i=1}^{n}f_{i}[(x_{i}- a)]= Minimo  $$
+
   \item [{E)}] Multiplicando-se (ou dividindo-se) todos os elementos
 de um conjunto de dados por uma constante, média aritimética fica multiplicada ou dividida por essa constante;
+
+
 \item [{F)}] Somando-se (ou subtraindo-se) uma constante positiva de todos os elementos de um conjunto de dados, a média aritmética fica aumentada (ou diminuída) dessa constante;
 
+\vskip0.3cm
+\textbf{Provar para Soma}: 
+\vskip0.3cm
 
 Sejam $x_{1}, x_{2},...,x_{n}$ os valores assumidos por uma variável $x$ e $\Bar{x}$ a média aritmética correspondente. Se a cada $(x_{i}=1,2,...,n)$, adiciornar uma \textbf{constante real c}, a média aritmética fica adicionada de \textbf{c} unidades.\vskip0.3cm
 
 Considera-se que os novos valores assumidos por essa variável sejam: $(x_{1}+c),(x_{2}+c),...,(x_{n}+c)$, a nova média é dada por:
 
 \begin{equation}\label{media3}
-     \bar{X}= \frac{\sum_{i=1}^{n}(x_{i}+c)}{n}=\frac{(x_{1}+c)+(x_{2}+c)+...+(x_{n}+c)}{n} 
+     \bar{x}= \frac{\sum_{i=1}^{n}(x_{i}+c)}{n}=\frac{(x_{1}+c)+(x_{2}+c)+...+(x_{n}+c)}{n} 
 \end{equation}
 
 \begin{equation*}\label{media4}
-  =\frac{(x_{1})+(x_{2})+...+(x_{n})}{n}+ \overbrace{\frac{c+c+...+c}{n}}^{n}+\frac{\sum_{i=1}^{n}}{n}=\frac{nc}{c}
+  =\frac{(x_{1})+(x_{2})+...+(x_{n})}{n}+ \overbrace{\frac{c+c+...+c}{n}}^{n}+\frac{\sum_{i=1}^{n}x_{i}}{n}=\frac{nc}{c}
 \end{equation*}
 
 isto é, 
 
 $$\Bar{x}^{'}=\Bar{x}+c$$
 
+
+
+\vskip0.3cm
+\textbf{Provar para Subtração}: 
+\vskip0.3cm
+
+Sejam $x_{1}, x_{2},...,x_{n}$ os valores assumidos por uma variável $x$ e $\Bar{x}$ a média aritmética correspondente. Se a cada $(x_{i}=1,2,...,n)$, subtrair uma \textbf{constante real c}, a média aritmética fica adicionada de \textbf{c} unidades.\vskip0.3cm
+
+
+Considera-se que os novos valores assumidos por essa variável sejam: $(x_{1}-c),(x_{2}-c),...,(x_{n}-c)$, a nova média é dada por:
+
+\begin{equation}\label{media3}
+     \bar{x}= \frac{\sum_{i=1}^{n}(x_{i}-c)}{n}=\frac{(x_{1}-c)+(x_{2}-c)+...+(x_{n}-c)}{n} 
+\end{equation}
+
+\begin{equation*}\label{media4}
+  =\frac{(x_{1})+(x_{2})+...+(x_{n})}{n}- \overbrace{\frac{c-c-...-c}{n}}^{n}+\frac{\sum_{i=1}^{n}x_{i}}{n}=- \frac{nc}{c}
+\end{equation*}
+
+isto é, 
+
+$$\Bar{x}^{'}=\Bar{x}-c$$
+
+
+
+
 \item [{G)}]multiplicando-se todas as frequâncias de uma distribuição por uma constante positiva, a média aritmética não se autera; 
 \end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Média Artimética(Dados Tabelados)}
 
@@ -430,10 +498,6 @@ $$\Bar{x}^{'}=\Bar{x}+c$$
 \begin{equation}\label{media2}
      \bar{X}= \frac{x_{1}f_{1}+x_{2}f_{2}+\ldots+x_{n}f_{n}}{n} = \frac{\sum_{i=1}^{n}f_{i}x_{i}}{\sum_{i=1}^{n}f_{i}}
 \end{equation}
-
-
-
-
 
 \subsection{Média Geométrica Simples (G)}
 
