@@ -683,7 +683,7 @@ distribuição de freqüência.\vskip0.3cm
 
 \begin{figure}[!htb]
 \centering{
- \includegraphics[scale=0.75]{figures/Boxcaixa.eps}\\
+ \includegraphics[scale=0.65]{figures/Boxcaixa.eps}\\
   \vspace{-0.2cm}
   \caption{Esquema Geral sobre o diagrama de caixas ou Box Plot.}\label{esquematabela}
   }
@@ -694,7 +694,10 @@ distribuição de freqüência.\vskip0.3cm
 \inic As linhas verticais que saem do diagrama foram chamadas whiskers
 por Tukey, essas linhas servem de elo entre os valores mais
 centrais e os extremos da série de dados, geralmente representam
-os valores mínimos e máximos. A mediana da série é representada
+os valores mínimos e máximos.\vskip0.3cm 
+
+
+A mediana da série é representada
 por uma linha horizontal central no diagrama, e o quartil inferior
 (Q1) e superior (Q3), pelas linhas inferior e superior que
 delimitam a caixa. A mediana representa uma estimativa de tendência central, e a altura da do diagrama, uma estimativa da variabilidade geral dos
@@ -707,11 +710,12 @@ nos dados.\vskip0.3cm
 
 
 
+\newpage
 
-\vspace{-6cm}
+\vspace{-1cm}
 \begin{figure}[H]
     \centering
-\includegraphics[scale=0.25,height=230pt,width=11cm]{figures/boxplot_dosagem.jpeg}
+\includegraphics[scale=0.25,height=242pt,width=11cm]{figures/boxplot_dosagem.jpeg}
     \caption{\textbf{BoxPlot Tradicional}: Dosagem Alcoólica de Vítimas Fatais por Acidentes de Trânsito, Região Metropolitrana de Belém em 2022.}
     \label{fig:my_label25}
 \end{figure}
@@ -721,7 +725,7 @@ nos dados.\vskip0.3cm
 \vspace{-2cm}
 \begin{figure}[H]
     \centering
-\includegraphics[scale=0.25,height=230pt,width=11cm]{figures/boxplot_dosagem_jitter.jpeg}
+\includegraphics[scale=0.25,height=242pt,width=11cm]{figures/boxplot_dosagem_jitter.jpeg}
     \caption{\textbf{BoxPlot com Efeito Jitter}: Dosagem Alcoólica de Vítimas Fatais por Acidentes de Trânsito, Região Metropolitrana de Belém em 2022.}
     \label{fig:my_label25}
 \end{figure}
@@ -731,7 +735,7 @@ nos dados.\vskip0.3cm
 
 
 
-\newpage
+
 \subsection{Gráfico de Violino, ViolinPlot}
 
 O gráfico chamado de Violino, é muito utilizado quando se quer unificar a visualização do histograma junto com a do Boxplot, ou seja um casamento entre histogramas e boxplots. Observe que quanto menor o desvio padrão, mais concentrado são os dados, sendo refletido tanto no histograma como no boxplot. A vantagem do uso do \textbf{ViolinPlot} é que, além  das informações que o boxplot traz consigo, traz a densidade dos dados. 
@@ -777,11 +781,17 @@ O gráfico chamado de Violino, é muito utilizado quando se quer unificar a visu
     Gráficos       & Descrição &  Vantagens & Desvantagens \\   
 \hline\hline
   Barras           &           &           &             \\
+  \hline
   Barras Agrupadas &           &           &              \\
+  \hline
   Linhas           &           &           &              \\  
+  \hline
   Setores          &           &           &              \\
+  \hline
   Histograma       &           &           &              \\
+  \hline
   Polígono         &           &           &              \\
+  \hline
   Box Plot         &           &           &              \\
 \hline\hline
 \end{tabular}
