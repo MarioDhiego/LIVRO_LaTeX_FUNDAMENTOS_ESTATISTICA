@@ -225,7 +225,7 @@ Sejam $x_{1}, x_{2}, ..., x_{n}$, os elementos de um rol numérico, valores part
 
 
 \begin{equation}\label{media1}
-     \bar{X}=\frac{x_{1}+x_{2}+x_{3}+\ldots+x_{n}}{n}= \frac{\sum_{i=1}^{n}x_{i}}{n}
+\bar{X}=\frac{x_{1}+x_{2}+x_{3}+\ldots+x_{n}}{n}= \frac{\sum_{i=1}^{n}x_{i}}{n}
 \end{equation}
 
 
@@ -586,11 +586,14 @@ $$\Bar{x}^{'}=\Bar{x}-c$$
 
 
 
-\subsection{Média Artimética(Dados Tabelados)}
+\subsection{Média Artimética(Dados Tabulados)}
+
+Se os números $x_{1},x_{2},x_{3},\ldots, x_{n}$ ocorrerem $f_{1}, f_{2}, f_{3}, \ldots, f_{n}$ vezes, a média aritmética para dados em tabelas será:
 
 
 \begin{equation}\label{media2}
-     \bar{X}= \frac{x_{1}f_{1}+x_{2}f_{2}+\ldots+x_{n}f_{n}}{n} = \frac{\sum_{i=1}^{n}f_{i}x_{i}}{\sum_{i=1}^{n}f_{i}}
+     \bar{X}= \frac{x_{1}f_{1}+x_{2}f_{2}+x_{3}f_{3}+
+ \ldots+x_{n}f_{n}}{f_{1}+f_{2}+f_{3}+\ldots+f_{n}} = \frac{\sum_{i=1}^{n}f_{i}x_{i}}{\sum_{i=1}^{n}f_{i}}
 \end{equation}
 
 \subsection{Média Geométrica Simples (G)}
@@ -659,6 +662,15 @@ H=(\frac{(\frac{1}{x_{1}})+(\frac{1}{x_{2}})+\ldots+(\frac{1}{x_{n}})}{n})^{-1}
 =\frac{1}{\frac{1}{N}\sum_{i=1}^{n}\frac{1}{X_{i}}}
 \end{equation*}
 
+\vskip0.3cm
+
+\textbf{Exemplor Prático}: Os Agentes de Fiscalização de Trânsito do DETRAN-PA, fazem o acompanhamento tático da imagem de Nossa senhora de Nazaré durante o mês de outubro (\textbf{Círio de Nazaré}). Viajando de Belém para Marituba à velocidade média de 30 km/h e volta de Marituba para Belém, pelo mesmo caminho, à velocidade média de 60 km/h. Qual a velocidade média para a viagem completa.
+
+\begin{equation}\label{exemplo_harmonica}
+Velocidade \ \  Media = \frac{2}{\frac{1}{30}+\frac{1}{60}} = 40 km/h
+\end{equation}
+
+
 \subsection{Média Harmônica Ponderada ($\bar{X}_{HP})$}
 
 
@@ -688,7 +700,7 @@ amostra. Com a finalidade de evitar os efeitos desaconselháveis de possíveis v
 extravagantes, recorre-se ao conceito de média aparada. \vskip0.3cm
 
 
-A média aparada (trimmed mean) é uma medida de localização resistente, cuja sensibilidade a pontos aberrantes ou chamados outliers, é reduzida por remover uma proporção especificada da observação maior e menor, ou seja, elimina os valores extremos. Se a proporção de observações omitida de cada lado é $\alpha$, então a média dos $\alpha$ dados cortados é dada por:
+A média aparada (\textbf{trimmed mean}) é uma medida de localização resistente, cuja sensibilidade a pontos aberrantes ou chamados outliers, é reduzida por remover uma proporção especificada da observação maior e menor, ou seja, elimina os valores extremos. Se a proporção de observações omitida de cada lado é $\alpha$, então a média dos $\alpha$ dados cortados é dada por:
 
 \begin{equation}\label{aparada}
     \bar{X}_{\alpha}=\frac{1}{n-2k}\sum_{i=k+1}^{n-k}X_{i}
@@ -882,7 +894,7 @@ A moda via fórmula de King, é menos precisa do que a moda de Czuber, seu cálc
 \end{equation}
 
 
-\newpage
+%\newpage
 \textbf{Moda pelo Método de Czuber}
 \vskip0.3cm
 
@@ -1008,6 +1020,9 @@ de cálculo da moda de uma distribuição pela fórmula de czuber.
 
 %%%%%%%%%%%%%%%%%%%%%%%%% TABELA2  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+\newpage
 \subsection{Comparação de Medidas Estatísticas Básicas}
 
 \inic Após apresentação das principais medidas estatísticas de tendência central, serão resumidas as vantagens e desvantagens.\vskip0.3cm
@@ -1293,7 +1308,7 @@ Uma medida usada muito freqüentemente para avaliar o grau de assimetria ou de d
 \begin{enumerate}
   \item [{1)}]Primeiro Coeficiente de Assimetria de Pearson
   \begin{equation}\label{assimetria}
-    AS=\frac{\bar{X}-M_{o}}{S_{x}}
+    AS= \frac{Media-Moda}{Desvio-Padrao} =\frac{\bar{X}-M_{o}}{S_{x}}
 \end{equation}
   \item [{2)}]Segundo Coeficiente de Assimetria de Pearson
   \begin{equation}\label{assimetria}
