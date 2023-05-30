@@ -836,7 +836,818 @@ $k=2,3,...,n$:
 
 
 
+
+
+
+
+
+
+
+
+\newpage
+
+\section{Variáveis Aleatórias Unidimensionais}
+\subsection{Introdução}
+
+Ao se descrever o espaço amostral(S) de um experimento($\Omega$)
+nota-se que os elementos não são necessariamente números. Assim,
+por exemplo, no lançamento de duas moedas pode-se ter o seguinte
+espaço amostral:\vskip0.3cm
+
+
+\begin{equation}
+    S = \{CC, CK, KC, KK\}
+\end{equation}
+
+
+
+\par Quando se joga uma moeda certo números de vezes, pode se estar
+interessado, não na particular sucessão obtida, mas somente no
+aumento de caras. Do mesmo modo, quando se joga uma moeda até
+obter uma cara, pode-se estar unicamente interessado no número de
+jogadas necessárias para obtê-la.\vskip0.3cm
+
+\par Contudo, na maior parte das vezes, se está interessado num
+resultado numérico, isto é, deseja-se associar aos elementos do
+espaço amostral S um número real $x=X(S)$. Desta forma formula-se
+a definição:\vskip0.3cm
+
+\subsection{Definição}
+
+Seja $E$ um experimento com um espaço amostral associado $S$. Uma
+função X que associe a cada elemento de $S(s \in S)$ um número
+real $x=X(s)$ é denominada \textbf{Variável Aleatória}.\vskip0.3cm
+
+\par O conjunto formado por todos os valores $x$, isto é, a imagem
+da variável aleatória X, é \textbf{denominado de conjunto de
+valores de X} e anotado por $X(S)$. Desta forma:
+
+\begin{equation}
+    X(S) = \{ x \in \mathbb{R}/X(s)=x  \}
+\end{equation}
+
+
+
+%\textbf{Definição 2}: Uma variável aleatória X num espaço amostral
+%S é uma função de S no conjunto $\mathbb{R}$ dos números reais tal
+%que a imagem inversa de cada intervalo de $\mathbb{R}$ seja um
+%evento de S.\vskip0.3cm
+
+As variáveis aleatórias serão definidas usualmente com as letras
+maiúscula $X, Y, Z, \ldots, etc$. Se X é uma variável aleatória,
+como s é enumerável; por exemplo
+$X(S)={x_{1},x_{2},x_{3},\ldots,}$. Os números $x_{i}$ são os
+valores da variável aleatória.\vskip0.3cm
+
+
+
+
+\newpage
+\textbf{Exemplo 1}: Seja S o espaço amostral formado pelas
+sequências obtidas no lançamento de 3 moedas equilibradas. Seja X
+a variável aleatória definida como sendo o número de caras da
+sequência, isto é, $X(s)=$ números de caras. O conjunto de
+valores da variável X é $X(S)=\{0,1,2,3\}$, pois, neste caso,
+tem-se:
+
+\begin{table}[!htb]
+\centering{\caption{Experimento do Lancamento de 3 Moedas equilibradas.}
+\begin{tabular}{c|c|c|c|c|c|c|c|c}
+  \hline\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+   $S$      & KKK & CKK & KCK & KKC & CCK & CKC & KCC & CCC\\
+  \hline
+    $X(s)$  & 0   & 1   & 1   &  1  & 2   & 2   & 2 & 3 \\
+  \hline\hline
+\end{tabular}}
+\end{table}
+
+
+%\begin{figure}[!htb]
+%\centering
+%  % Requires \usepackage{graphicx}
+%  \includegraphics[scale=1]{fig7.eps}\\
+%  \vspace{-0.5cm}
+%  \caption{Variável Aleatória X: número de caras obtidas no lançamento de 3 caras.}\label{}
+%\end{figure}
+
 %\newpage
+
+Note-se que para este mesmo espaço amostral poderíamos definir
+muitas outras variáveis aleatórias, por exemplo: o quadrado de
+números de caras e o número de caras menos o número de coroas,
+etc.
+
+%\newpage
+
+\section{Variável Aleatória Discreta (V.A.D)}
+
+\textbf{Definição 1}: Seja S o espaço amostral e seja X uma
+variável aleatória. Dado que o número de valores dos quais a
+variável aleatória X poderá assumir, ou seja, $R_{x}$, o
+contradomínio, sendo\emph{ finito ou infinito contável ou
+enumerável} de valores $X_{1}, X_{2}, X_{3}, \ldots,$ denomina-se
+X de variável aleatória discreta.
+
+\subsubsection{Função de Probabilidade de uma V.A.D}
+
+\textbf{Definição 1:} Seja X uma variável aleatória num espaço
+amostral S com contradomínio finito, isto é, $X(S)=\{x_{1}, x_{2},
+\ldots, x_{n} \}$. Se, para cada ponto x, de $X(S)$, definirmos
+sua probabilidade como $P(X=x_{i})$, denotada por $f(x_{i})$,
+teremos um espaço de probbilidade. Esta função $f$ em $X(S)$, isto
+é, definida por
+
+
+\begin{equation}\label{}
+f(x_{i})=P(X=x_{i}),
+\end{equation}
+
+é chamada de distribuição ou função de probabilidade de X e é
+usualmente dada na forma de uma tabela.
+
+
+\begin{table}[!htb]
+\centering{\caption{}
+\begin{tabular}{c|c|c|c|c}
+  \hline\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+   $x_{1}$   & $x_{2}$    & $x_{3}$    & $\ldots$ & $x_{n}$ \\
+  \hline
+  $f(x_{1})$ & $f(x_{2})$ & $f(x_{3})$ & $\ldots$ & $f(x_{n})$\\
+  \hline\hline
+\end{tabular}}
+\end{table}
+
+
+\newpage
+\textbf{Definição 2:} Seja X uma variável aleatória
+discreta(V.A.D), isto é, com $X(S)$ finito e infinito enumerável,
+definida num espaço amostral S. A cada resultado $x_{i}$ de $X(S)$
+associa-se um número $f(x_{i})=P(X=x_{i})$ denominado
+probabilidade de $x_{i}$ e tal que satisfaz as seguintes
+propriedades:
+
+
+$$
+f(x_{i}) \geq 0, \quad \forall i.
+$$
+
+$$
+\sum_{i=1}^{n}f(x_{i})=1
+$$
+
+
+A função $f$ assim definida é denominada de \textbf{função de
+probabilidade} de X. A coleção dos pares $(x_{i}, f(x_{i}))$ para
+$i=1,2,3,...$ é denominada de distribuição de probabilidade da
+variável aleatória X.\vskip0.3cm
+
+\textbf{Exemplo 2}: Jogando-se uma moeda duas vezes, o espaço
+amostral é
+
+$$
+S= \{ cc, ck, kc, kk \}
+$$
+
+seja X o número de caras que aparecem. A cada ponto amostral
+podemos associar um número real para X, tal como se vê na tabela
+abaixo.
+
+
+
+
+\begin{table}[!htb]
+\centering{\caption{Variável Aleatória X: número de caras}
+\begin{tabular}{c|c|c|c|c}
+  \hline\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+   Ponto Amostral    & cc  & ck  &  kc & kk  \\
+  \hline
+    $x$              & 0   & 1   &  1  & 2 \\
+  \hline\hline
+\end{tabular}}
+\end{table}
+
+%\newpage
+
+
+Assim, a função de probabilidade da variável aleatória x: números
+de caras é
+
+\begin{table}[!htb]
+\centering{\caption{função de probabilidade de X: números de
+caras}
+\begin{tabular}{c|c|c|c}
+  \hline\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+   $x$      & 0   & 1   &   2  \\
+  \hline
+    $f(x)$  & 1/4 & 1/2 &  1/4 \\
+  \hline\hline
+\end{tabular}}
+\end{table}
+
+
+\newpage
+\subsubsection{Função de Distribuição Acumulada de uma V.A.D}
+
+\textbf{Definição 1}: Seja X uma variável aleatória discreta com
+função densidade $f(x)$. Então a função de distribuição
+acumulada(FDA) de X é a função F em escada definida por:
+
+\begin{equation}\label{}
+    F(x)=P(X \leq x)= \sum f(X_{i}),
+\end{equation}
+
+onde x é um número real entre $-\infty < x < \infty$.\vskip0.3cm
+
+
+Se X toma apenas um número finito de valores
+$x_{1},x_{2},...,x_{n}$ então a função de distribuição acumulada é
+dada por
+
+$$
+F(x)=
+\left\{%
+\begin{array}{ll}
+    0                                     & \hbox{$-\infty< x < x_{1}$} \\
+    f(x_{1})                              & \hbox{$x_{1} \leq x < x_{2}$} \\
+    f(x_{1})+f(x_{2})                     & \hbox{$x_{2} \leq x < x_{3}$} \\
+    \vdots                                & \hbox{$\vdots$} \\
+    f(x_{1})+f(x_{2})+\ldots+  f(x_{n})   & \hbox{$x_{n} \leq x < \infty$} \\
+\end{array}%
+\right.
+$$
+
+
+\textbf{Exemplo 1} : Seja X uma variável aleatória discreta com a
+função de distribuição da tabela abaixo:
+
+
+\begin{table}[!htb]
+\centering{\caption{}
+\begin{tabular}{c|c|c|c|c}
+  \hline\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+   $x$   & -2  & 1   & 2 & 4 \\
+  \hline
+  $f(X)$ & 1/4 & 1/8 & 1/2 & 1/8\\
+  \hline\hline
+\end{tabular}}
+\end{table}
+
+
+Então a função de distribuição acumulada F(x) de X é dada por:
+
+$$
+F(x)=
+\left\{%
+\begin{array}{ll}
+   0   , & se \quad \hbox{$x < -2$;} \\
+   1/4 , & se \quad \hbox{$-2 \leq x < 1$;} \\
+   3/8 , & se \quad \hbox{$1 \leq x < 2$;} \\
+   7/8 , & se \quad \hbox{$2 \leq x < 4$;} \\
+   1   , & se \quad \hbox{$x \geq 4$.} \\
+\end{array}%
+\right.
+$$
+
+\textbf{Exemplo 2} : Suponhamos que a variável aleatória X tome os
+três valores 0,1 e 2, com probabilidades $1/3, 1/6 e 1/2$,
+respectivamente. Então, a função de distribuição de probabilidade
+de X é denotada por:
+
+
+\begin{table}[!htb]
+\centering{\caption{}
+\begin{tabular}{c|c|c|c}
+  \hline\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+   $x$   &  0  & 1   & 2 \\
+  \hline
+  $f(X)$ & 1/3 & 1/6 & 1/2 \\
+  \hline\hline
+\end{tabular}}
+\end{table}
+
+Assim, a função de distribuição acumulada de X é,
+
+$$
+F(x)=
+\left\{%
+\begin{array}{ll}
+   0   , & se \quad \hbox{$x < 0$;} \\
+   1/3 , & se \quad \hbox{$0 \leq x < 1$;} \\
+   1/2 , & se \quad \hbox{$1 \leq x < 2$;} \\
+   1   , & se \quad \hbox{$x \geq 2$.} \\
+\end{array}%
+\right.
+$$
+
+
+%\newpage
+
+\subsection{Esperança de uma Variável Aleatória Discreta}
+
+Seja X uma variável aleatória discreta, com valores possíveis
+$x_{1},x_{2},\ldots,x_{n}$. Seja $ f(x_{i})= P(X=x_{i})$,
+$i=1,2,\ldots,n$. Então, o valor esperado de X (ou esperança
+matemática, expectância ou média de X), denominado por $E(X)$ é
+definida por :
+
+
+\begin{equation}\label{e(x)}
+    E(X) = x_{1}P(X=x_{1})+x_{2}P(X=x_{2})+\ldots+x_{n}P(X=x_{n})= \sum_{i=1}^{\infty} x_{j}P(X=x_{j})
+\end{equation}
+
+ou equivalente, se $P(X=x_{i})=f(x_{i})$,
+
+
+\begin{equation}\label{e(x)}
+    E(X) = x_{1}f(x_{1})+x_{2}f(x_{2})+\ldots+x_{n}f(x_{n})= \sum_{i=1}^{\infty} x_{j}f(x_{j})
+\end{equation}
+
+
+\textbf{Exemplo 3}: Suponha-se um jogo disputado com um único dado
+honesto, em que um jogador ganha R\$20 se aparece a face 2, R\$40
+se aparece a face 4, perde R\$30 se aparece a face 6, e não ganha
+nem perde se aparece qualquer das outras faces. Determine a
+esperança de seu ganho.\vskip0.3cm
+
+Seja X uma variável aleatória discreta que dá a quantia ganha em
+qualquer jogada. As importância possíveis associados ao
+aparecimento de $1,2,...,6$ são $x_{1},x_{2},...,x_{6}$
+respectivamente, enquanto que as probabilidades respectivas são \\ 
+$f(x_{1}),f(x_{2}),...,f(x_{6})$.
+
+
+\begin{table}[!htb]
+\centering{\caption{}
+\begin{tabular}{c|c|c|c|c|c|c}
+  \hline\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+   $x_{j}$   & 0   & +20 & 0   & +40 & 0 & -30 \\
+  \hline
+  $f(x_{j})$ & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6\\
+  \hline\hline
+\end{tabular}}
+\end{table}
+
+Então o valor esperado de X é
+
+$$
+E(X)= \left[\left(0 \times \frac{1}{6}\right)+\left(20 \times
+\frac{1}{6}\right)+ \left(0 \times \frac{1}{6}\right)+ \left(40
+\times \frac{1}{6}\right)+\left(0 \times
+\frac{1}{6}\right)+\left(-30 \times \frac{1}{6}\right)\right]=5
+$$
+
+Segue-se que o jogador pode esperar ganhar R\$5.
+
+
+\subsection{Variância de uma Variável Aleatória Discreta}
+
+Seja X uma variável aleatória discreta. Definimos a variância de
+X, denotado por $V(X)$.
+
+\begin{equation}\label{v(x)}
+    V(X) = E[X-E(X)]^{2} = E(X^{2})-[E(X)]^{2}
+\end{equation}
+
+onde a $E(X^{2})$ é definida por:
+
+\begin{equation}\label{e(x)}
+    E(X^{2}) = x_{1}^{2}f(x_{1})+x_{2}^{2}f(x_{2})+\ldots+x_{n}^{n}f(x_{n})= \sum_{i=1}^{\infty} x_{j}^{2}f(x_{j})
+\end{equation}
+
+
+\textbf{Exemplo 4}: Usando o exemplo 3, calcule a variãncia.
+
+
+$$
+E(X^{2})= \left[\left(0^{2} \times \frac{1}{6}\right)+\left(20^{2}
+\times \frac{1}{6}\right)+ \left(0^{2} \times \frac{1}{6}\right)+
+\left(40^{2} \times \frac{1}{6}\right)\right]
+$$
+
+
+$$
+\left[+\left(0^{2} \times \frac{1}{6}\right)+\left(-30^{2} \times
+\frac{1}{6}\right)\right]= 183,33
+$$
+
+
+$$
+V(X) = E(X^{2})-[E(X)]^{2} = 183,33 - [5]^{2}= 158,33.
+$$
+
+%\newpage
+
+\textbf{Exercício 1}: Consideremos a jogada de um par de dados e
+seja X a variável aleatória (soma dos pontos).
+
+\begin{enumerate}
+    \item Determine a função de probabilidade de X.
+    \item Construa um gráfico para a função de probabilidade de X.
+    \item Calcule a Esperança e variância da variável aleatória X.
+    \item Dtermine a função de distribuição acumulada de X.
+    \item Construa um gráfico para a função de distribuição acumulada de X.
+\end{enumerate}
+
+
+
+\begin{table}[!htb] \centering{\caption{}
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c}
+  \hline\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  x    &  2   & 3    & 4    & 5    & 6    & 7    & 8    & 9    & 10   & 11    & 12 \\
+ \hline
+  f(x) & 1/36 & 2/36 & 3/36 & 4/36 & 5/36 & 6/36 & 5/36 & 4/36 & 3/36 &  2/36 & 1/36 \\
+  \hline\hline
+\end{tabular}}
+\end{table}
+
+$$
+E(X)= \left[\left(2 \times \frac{1}{36}\right)+\left(3 \times
+\frac{2}{36}\right)+ \ldots +\left( 12 \times
+\frac{1}{36}\right)\right]=
+$$
+
+
+$$
+E(X^{2})= \left[\left(2^{2} \times \frac{1}{36}\right)+\left(3^{2}
+\times \frac{2}{36}\right)+\left(12^{2} \times
+\frac{1}{36}\right)\right]=
+$$
+
+$$
+F(x)=
+\left\{%
+\begin{array}{ll}
+   0      & se \quad \hbox{$-\infty < x < 2$} \\
+   1/36   & se \quad \hbox{$2 \leq x < 3$} \\
+   3/36   & se \quad \hbox{$3 \leq x < 4$} \\
+   6/36   & se \quad \hbox{$4 \leq x < 5$} \\
+   \vdots & se \quad \hbox{$\vdots$} \\
+   35/36  & se \quad \hbox{$11 \leq x < 12$} \\
+    1     & se \quad \hbox{$12 \leq x < \infty$} \\
+\end{array}%
+\right.
+$$
+
+%\newpage
+
+\textbf{Exercício 2}: Seja X uma variável aleatória que representa
+o número de ases em uma extração aleatória de 4 cartas de um
+baralho usual de 52 cartas.
+
+\begin{enumerate}
+    \item Determine a função de probabilidade de X.
+    \item Construa um gráfico para a função de probabilidade de X.
+    \item Calcule a Esperança e variância da variável aleatória X.
+    \item Dtermine a função de distribuição acumulada de X.
+    \item Construa um gráfico para a função de distribuição acumulada de X.
+\end{enumerate}
+
+\textbf{Exercício 3}: Uma urna contém 5 bolas brancas e 3 pretas.
+Extraem-se duas bolas aleatoriamente, sem reposição. Seja X o
+número de bolas brancas.
+
+\begin{enumerate}
+    \item Dtermine a função de distribuição acumulada de X.
+    \item Construa um gráfico para a função de distribuição acumulada de X.
+    \item Calcule a Esperança e variância da variável aleatória X.
+\end{enumerate}
+
+\textbf{Exercício 4}: Seja Z uma variável aleatória que representa
+o número de caras menos o número de coroas em duas jogadas de uma
+moeda honesta.
+
+\begin{enumerate}
+    \item Dtermine a função de distribuição acumulada de Z.
+    \item Construa um gráfico para a função de distribuição acumulada de X.
+    \item Calcule a Esperança e variância da variável aleatória Z.
+\end{enumerate}
+
+\textbf{Exercício 5}: Determinar a probabilidade de haver meninos
+e meninas em famílias com 3 crianças, admitindo-se as mesmas
+probabilidades ambos.
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Variáveis Aleatórias Contínuas (V.A.C)}
+
+De forma geral, as variáveis aleatórias que representam medidas de
+grandezas físicas como coordenadas espaciais, peso, tempo,
+temperatura e voltagem são descritas mais adequadamente como
+variáveis aleatórias contínuas. Variáveis aleatórias associadas
+nas contagens de objetos ou eventos são exemplos típicos de
+variáveis aleatórias discretas.\vskip0.3cm
+
+Entretanto, existem casos em que tanto a formulação discreta como
+a contínua poderiam ser apropriadas. Assim, embora normalmente a
+medida de comprimento seja considerada como uma variável aleatória
+contínua, pode-se considerar a medida arredondada para um certo
+número de casas decimais, e portanto, como sendo uma variável
+aleatória discreta.\vskip0.3cm
+
+
+Existem muitas situações, tanto teóricas quanto aplicadas, em que
+as variáveis aleatórias naturais a considerar são contínuas ao
+invés de discretas, vejamos algumas definições formais.\vskip0.3cm
+
+
+\textbf{Definição 1}: Seja E um experimento e S um espaço amostral
+associado, Se X é uma variável aleatória definida em S tal que
+$X(S)$ seja infinito não-enumerável, isto é, seja um intervalo ou
+conjunto de intervalos de números reais, então X é dita uma
+variável aleatória contínua.
+
+
+
+\subsection{Função Densidade de Probabilidade de uma V.A.C}
+
+Seja X uma variável aleatória contínua , se existir uma função f,
+denominado função densidade de probabiliade (fdp) de X que
+satisfaça às seguintes condições:
+
+
+\begin{equation}\label{}
+    f(x_{i}) \geq 0, \quad \forall x.\in \mathbb{R}
+\end{equation}
+
+
+\begin{equation}\label{}
+    \int^{+\infty}_{-\infty}f(x)dx=1
+\end{equation}
+
+onde a 2.8 é a afirmativa matemática do fato de que uma variável
+aleatória real deve certamente estar compreendida entre $-\infty$
+e $\infty$. Definimos então a probabilidade de X estar entre a e b
+por
+
+\begin{equation}\label{}
+    P(a< X < b)=\int_{a}^{b}f(x)dx = F(b)-F(a)
+\end{equation}
+
+
+\newpage
+\textbf{Exemplo 1}: A duração, em anos, de uma certa lâmpada
+especial é uma variável aleatória contínua com densidade dada por:
+
+
+$$
+f(x)=
+\left\{%
+\begin{array}{ll}
+   2e^{-2x}       & se \quad \hbox{$x \geq 0$;} \\
+   0              & se \quad \hbox{c.c} \\
+\end{array}%
+\right.
+$$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Função Distribuição Acumulada de uma V.A.C}
+
+Seja X uma variável aleatória contínua com função densidade de
+probabilidade f(x). Então, a função de distribuição acumulada(fda)
+de X é a função $F$ definida por:
+
+
+\begin{equation}\label{F}
+    F(X) = P(X\leq x_{i})= \int_{-\infty}^{x}f(s)ds
+\end{equation}
+
+
+\textbf{Exemplo 1}: Seja X uma variável aleatória contínua com
+função densidade de probabilidade dada por:
+
+$$
+f(x)=
+\left\{%
+\begin{array}{ll}
+   \frac{1}{2}x   & se \quad \hbox{$0 < x < 2$;} \\
+   0              & se \quad \hbox{c.c} \\
+\end{array}%
+\right.
+$$
+
+A função de distribuição acumulada F(x) é dada por:
+
+$$
+F(x) = \int^{x}_{0}\frac{1}{2}sds = \frac{1}{4}x^{2}
+$$
+
+$$
+F(x)=
+\left\{%
+\begin{array}{ll}
+    0                 & se \quad \hbox{$x < 0$;} \\
+   \frac{1}{4}x^{2}   & se \quad \hbox{$0 \leq x \leq 2$;} \\
+   1                  & se \quad \hbox{x > 2} \\
+\end{array}%
+\right.
+$$
+
+
+\subsection{Esperança de uma Variável Aleatória Contínua}
+
+Seja X uma variável aleatória contínua com função densidade de
+probabilidade f, o valor esperado (ou esperança matemática,
+expectância ou média) de X é definido por:
+
+
+\begin{equation}\label{}
+    E(X)=\int_{-\infty}^{+\infty}xf(x)dx
+\end{equation}
+
+
+\subsection{Variância de uma Variável Aleatória Contínua}
+
+Seja X uma variável aleatória contínua com média E(X), então a
+variância de X, anotada por V(X) é definida por:
+
+
+\begin{equation}\label{}
+V(X) = E(X^{2})-[E(X)^{2}]= \int_{-\infty}^{\infty}x^{2}f(x)dx
+-\left[\int_{-\infty}^{+\infty}xf(x)dx\right]^{2}
+\end{equation}
+
+
+\textbf{Exemplo 1}: Seja X uma variável aleatória contínua com
+função densidade de probabilidade dada por:
+
+$$
+f(x)=
+\left\{%
+\begin{array}{ll}
+   \frac{1}{3}x^{3}   & se \quad \hbox{$0 < x < 2$;} \\
+   0                  & se \quad \hbox{c.c} \\
+\end{array}%
+\right.
+$$
+
+A Esperança da variável aleatória contínua X é dada por:
+
+$$
+E(X)= \int_{r} xf(x)dx = \int^{2}_{0}x\frac{1}{3}x^{3} =
+\int^{2}_{0}\frac{1}{3}x^{4} = \frac{x^{5}}{15}\mid^{2}_{0}=
+\frac{32}{15}
+$$
+
+A Variância da variável aleatória contínua X é dada por:
+
+$$
+E(X^{2})= \int_{r} x^{2}f(x)dx = \int^{2}_{0}x^{2}\frac{1}{3}x^{3}
+= \int^{2}_{0}\frac{1}{3}x^{5} = \frac{x^{6}}{18}\mid^{2}_{0}=
+\frac{32}{9}
+$$
+
+$$
+V(X) = E(X^{2})-[E(X)^{2}] =
+\frac{32}{9}-\left[\frac{32}{15}\right]^{2} = 12,64 - 2,133 =
+10,50
+$$
+
+\textbf{Exercício 1} Seja X uma variável aleatória contínua com
+função densidade de probabilidade de X.
+
+
+$$
+f(x)=
+\left\{%
+\begin{array}{ll}
+   cx^{2}      & se \quad \hbox{$0 < x < 3$} \\
+   0           & se \quad \hbox{c.c} \\
+\end{array}%
+\right.
+$$
+
+\begin{enumerate}
+    \item Determine a constante c.
+    \item Calcular a função de distribuição acumulada de X.
+    \item Calcule a Esperança e variância da variável aleatória Z.
+\end{enumerate}
+
+Para calcular a constante temos que integrar essa função e igualar
+a 1.
+
+$$
+\int_{-\infty}^{+\infty}f(x)dx = 1 \rightarrow
+\int_{0}^{3}cx^{2}dx = c\left[\frac{x^{3}}{3}\mid^{3}_{0}\right]
+\rightarrow 9c = 1 \rightarrow c = 1/9
+$$
+
+substituindo o valor da constante na função temos
+
+$$
+f(x)=
+\left\{%
+\begin{array}{ll}
+   \frac{1}{9}x^{2}      & se \quad \hbox{$0 < x < 3$} \\
+   0           & se \quad \hbox{c.c} \\
+\end{array}%
+\right.
+$$
+
+A função de distribuição acumulada F(x) é dada por:
+
+$$
+F(x) = \int^{x}_{-\infty}f(s)ds = \int^{x}_{0}\frac{1}{9}s^{2}ds =
+\frac{x^{3}}{27}
+$$
+
+$$
+F(x)=
+\left\{%
+\begin{array}{ll}
+    0                 & se \quad \hbox{$x < 0$;} \\
+   \frac{x^{3}}{27}   & se \quad \hbox{$0 \leq x \leq 3$;} \\
+   1                  & se \quad \hbox{$x \geq 3$} \\
+\end{array}%
+\right.
+$$
+
+A probabilidade $P(1 < x \leq 2)$ é dada por:
+
+$$
+P(a < X < b)=\int^{b}_{a}f(x)dx = F(b)-F(a)
+$$
+
+então
+
+$$P(1 < x \leq 2) = P(X \leq 2) - P(X \leq 1) = \int^{2}_{1}\frac{1}{9}x^{2}dx = \frac{x^{3}}{27}\mid^{2}_{1}=
+\frac{2^{3}}{27}-\frac{1^{3}}{27}=\frac{7}{27}$$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Propriedades da Esperança e Variância de Variáveis Aleatórias}
+
+\begin{enumerate}
+    \item[{(i)}] A média de uma constante é igual a própria constante.
+\end{enumerate}
+
+\begin{equation}\label{}
+E(k)=k
+\end{equation}
+
+
+\begin{enumerate}
+    \item[{(ii)}] Se multiplicarmos os valores de uma variável aleatória
+    por uma constante, a média fica multiplicada por esta
+    constante.
+\end{enumerate}
+
+
+\begin{equation}\label{}
+E(kX)=k.E(X)
+\end{equation}
+
+
+\begin{enumerate}
+    \item[{(iii)}] Se os valores de uma variável aleatória forem somados a
+    uma constante a média ficará igualmente somada dessa constante
+\end{enumerate}
+
+
+\begin{equation}\label{}
+E(X\pm k)=E(X)\pm k
+\end{equation}
+
+
+\begin{enumerate}
+    \item[{(iv)}] A média de uma soma ou diferença de duas variáveis
+    aleatórias é igual a soma ou diferença das médias dessas
+    variáveis.
+\end{enumerate}
+
+
+\begin{equation}\label{}
+E(X \pm Y)= E(X)\pm E(Y)
+\end{equation}
+
+
+\begin{enumerate}
+    \item[{(v)}] A média do produto de duas variáveis
+    aleatórias \textbf{independentes} é igual ao produto das
+    médias dessas variáveis.
+\end{enumerate}
+
+
+\begin{equation}\label{}
+E(XY)= E(X)E(Y)
+\end{equation}
+
+
+
+
+
+\newpage
 \section{Principais Distribuições de Probabilidade}
  
  
@@ -880,7 +1691,7 @@ Sendo: \vskip0.3cm
 \item $C_{n}^{y}$ = números de combinações de n elementos, tomados y a y; 
 \end{itemize} 
 
-\newpage
+%\newpage
 \subsection{Distribuição de Poisson}
 
 A distribuição de Poisson tem este nome em homenagem ao metemático, Astrônomo e físico francês \textbf{Simeon Denis Poisson}. Com característica próxima a Binomial, a distribuição de Poisson é uma distribuição descontínua, aplicável quando o resultado é o número de vezes que determinado evento ocorre. 
@@ -979,7 +1790,7 @@ Diversos autores consideram Laplace como tendo realizado as maiores contribuiç�
 
 \inic Existem inúmeros tipos de curvas que podem representar as distribuições. Na maioria das pesquisas na Gestão Pública, as observações variam em torno da distribuição normal, a qual é uma distribuição contínua. É a mais importante distribuição no campo da Estatística e tem a seguinte função de densidade:\vskip0.3cm 
 
-\newpage
+
 \begin{equation}
 f\left(x\right) = \frac{1}{\sqrt{2\pi \sigma^2}}exp \left\{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2 \right\},~~~-\infty<x<\infty~~\text{e}~\sigma>0
  \end{equation} 
@@ -1014,6 +1825,7 @@ William Sealy Gosset nasceu em 13 de junho de 1876 em Canterbury, Inglaterra, o 
 \end{figure}
 
 
+\newpage
 Ao final do século XIX, a famosa \textbf{Arthur Guinness Son and Company} era a maior cervejaria do mundo, e foi pioneira em diversos esforços para o Controle de Qualidade. Em 1899, um dos contratados para o cargo de químico, recém-formado na Universidade de Oxford, com 23 anos de idade e um currículo que combinava matemática e estatística, foi \textbf{William Sealy Gosset}.\vskip0.3cm
 
 %\begin{figure}[!htb]
@@ -1065,26 +1877,26 @@ O gráfico da função densidade da variável $t$ de student é simétrico e tem
 f\left(t\right)=\frac{1}{\sqrt{k \pi}}\frac{\Gamma\left(\frac{k+1}{2}\right) }{\Gamma \left(\frac{k}{2}\right)}\left(1+\frac{t^2}{k}\right)^{-\left(\frac{\upsilon+1}{2}\right)},~~~-\infty<x<\infty
 \end{equation}
 
-Sir \textbf{Ronald Fisher} o arquiteto da estatística experimental, um gigante entre os estatísticos, chamou Gosset de “O Faraday das Estatísticas”, reconhecendo sua capacidade de compreender princípios gerais e aplicá-los a problemas de importância prática (SALSBURG, 2000).\vskip0.3cm
+Sir \textbf{Ronald Fisher} o arquiteto da estatística experimental, um gigante entre os estatísticos, chamou Gosset de “O Faraday das Estatísticas”, reconhecendo sua capacidade de compreender princípios gerais e aplicá-los a problemas de importância prática (SALSBURG, 2000).
 
 
-
-%\newpage
+\newpage
 \subsubsection{Ronald Aylmer Fisher}
-
 
 Ronald Aylmer Fisher foi um estatístico, biológo e geneticista, nasceu em 17 de fevereiro de 1890, em East Finchley, Londres, sendo considerado um dos pais e o fundador da estatística moderna (BOX, 1978).\vskip0.3cm
 
 
 Fisher bacharelou-se em mamtemática pela Universidade de Cambridge, e que no início do século XX, em 1919, chefiou um laboratório de Estatística Experimental de Agricultura, chamado centro de experimentos de Rothamsted Research em Harpenden na Inglaterra, onde permaneceu até 1933 (SALSBURG, 2000).
 
-\vskip-1.2cm
+\vspace{-1.2cm}
+
 \begin{figure}
     \centering
 \includegraphics[scale=0.5]{figures/fisher.jpeg}
     \caption{Ronald Aylmer Fisher(1890-1962)}
     \label{fig:my_label3}
 \end{figure}
+
 
 Ronald Fisher nesse período se dedicou e estudou, diariamente, os problemas do planejamento e análise de pesquisa na àrea agrária. \vskip0.3cm
 
@@ -1101,7 +1913,7 @@ O grande fascínio de fisher pelos problemas de pesquisa, em ciências agrárias
 Foi descrito por Anders Hald como "um gênio que criou praticamente sozinho as fundações para a moderna ciência estatística (HALD, 1998) e Richard Dawkins, que o descreveu como "o maior dos sucessores de Darwin" (DAWKINS, 1995).\vskip0.3cm
 
 
-%\newpage
+\newpage
 Ronald Fisher recebeu vários prêmios importantes ao longo de sua carreira:
 
 \begin{itemize}
@@ -1111,3 +1923,5 @@ Ronald Fisher recebeu vários prêmios importantes ao longo de sua carreira:
     \item \textbf{Medalha Copley (1955):} É a medalha de maior prestígio atribuída pela Royal Society.
     \item \textbf{Medalha Darwin-Wallace (1958):} é uma medalha oferecida pela Linnean Society of London a cada 50 anos, por grande contribuições nos avanços para biologia evolucionista.
 \end{itemize}
+
+
