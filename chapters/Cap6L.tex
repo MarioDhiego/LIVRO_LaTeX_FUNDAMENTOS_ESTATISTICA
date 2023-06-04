@@ -160,10 +160,12 @@ ou seja,
 \subsection{Proporções e Percentagens}
 
 
-Uma proporção é o número, $a$, de observações com determinada caracteristica (como por exemplo aqueles que sofreram um acidente de tânsito) dividido pelo número total de observações, $a+b$, num determinado grupo (como aqueles que estão na condição de Motociclistas). Isto é,
+Uma proporção é o número, $a$, de observações com determinada caracteristica (como por exemplo aqueles que sofreram um acidente de trânsito) dividido pelo número total de observações, $a+b$, num determinado grupo (como aqueles que estão na condição de Motociclistas). Isto é,
 
 
-$$ \mbox{Proporção} = \frac{a}{a+b}$$
+$$ 
+\mbox{Proporção} = \left( \frac{a}{a+b} \right)
+$$
 
 Uma proporção sempre é definida como uma parte dividida pelo total e é útil para dados ordinais e números assim como para dados nominais, especialmente quando as observações forem colocadas numa tabela de frequência. Uma \textbf{Percentagem} é a proporção multiplicada por $100\%$.\vskip0.3cm
 
@@ -177,7 +179,9 @@ Uma razão é o número $a$ de observações num determinado grupo com cada cara
 dividida pelo número b de observações sem essa característica:
 
 
-$$ \mbox{Razão} = \frac{a}{b}$$
+$$ 
+\mbox{Razão} = \left( \frac{a}{b} \right)
+$$
 
 Uma razão sempre é definida como uma parte dividida por uma outra parte.\vskip0.3cm
 
@@ -186,7 +190,32 @@ Uma razão sempre é definida como uma parte dividida por uma outra parte.\vskip
 As Taxas são semelhantes as proporções exceto pelo fato de que é usado um multiplicador ($1.000 , 10.000 , ou 100.000$) e são calculados durante um período específico. O multiplicador é chamado de base e a fórmula é
 
 
-$$ \mbox{Taxa} = \frac{a}{a+b} \times base$$
+$$ 
+\mbox{Taxa} = \left( \frac{a}{a+b} \right) \times base
+$$
+
+
+
+\subsection{Coeficientes}
+
+É a relação entre o número de eventos reais (os acontecimentos) e os esperados (que poderiam acontecer). È a medida de probabilidade. O numerador exprime o número de eventos ocorridos e o denominador exprime a população efetivamente exposta ao evento.\vskip0.3cm
+
+Apresenta-se a seguir alguns exemplos de coeficientes.
+
+\subsubsection{Coeficiente de Mortalidade Geral - CMG}
+
+$$
+C_{M_{G}} = \left(  \frac{numero \ de \ total \ de \ obitos \ em \ certa \ area \ durante \ o \ ano}{populacao \ da \ mesma \ area \ ajustada \ para \ o \ meio \ do \ ano} \right) \times 1.000
+$$
+
+
+
+
+
+
+
+
+
 
 
 \newpage
@@ -1352,7 +1381,7 @@ As medidas de tendência  central possuem algumas vantagens e desvantagens. A m�
  
 \newpage 
 
-\section{Medidas de Achatamento ou Curtose }
+\section{Medidas de Achatamento, Afilamento ou Curtose }
 
 \inic Em alguns casos uma distribuição pode ter seus valores concentrados próximos da média tal que a distribuição tem um pico mais alto, em outros casos a distribuição pode ser plana. Assim, medidas do grau de agudez de uma distribuição são chamadas de coeficiente de curtose (SPIGEL et al, 2013). \vskip0.3cm
 
@@ -1366,10 +1395,10 @@ As medidas de tendência  central possuem algumas vantagens e desvantagens. A m�
 \item Quando a distribuição apresenta uma curva de frequência mais aberta (mais achatada em sua parte superior), ela é denominada Platicúrtica (Plato = Chato, Plano, Largo, etc).
 \end{itemize}
 
-Para avaliar o grau de curtose de uma curva ou distribuição de freqüências, usa-se o Coeficiente Percentílico de Curtose (C):
+Para avaliar o grau de curtose de uma curva ou distribuição de freqüências, usa-se o Coeficiente Percentílico de Curtose (K):
 
 \begin{equation}\label{curtose}
-    C=\frac{Q_{3}-Q_{1}}{2(D_{9}-D_{1})}
+    K=\frac{Q_{3}-Q_{1}}{2(D_{9}-D_{1})}
 \end{equation}
 
 Onde
@@ -1391,20 +1420,20 @@ pelos percentis $P_{90}=D_{9}$ e $P_{10}=D_{1}$, quando for o caso.
 Uma outra forma de representar o coeficiente de Curtose é da seguinte maneira
 
 \begin{equation}\label{curtose2}
-    C= \frac{k}{D_{9}-D_{1}}
+    K= \frac{C}{D_{9}-D_{1}}
 \end{equation}
 
-onde o k é chamado de amplitude semi-interquartilica
+onde o C é chamado de amplitude semi-interquartilica
 
 \begin{equation}\label{curtose2}
-    k= \frac{Q_{3}-Q_{1}}{2}
+    C= \frac{Q_{3}-Q_{1}}{2}
 \end{equation}
 
 
 \textbf{Escala de Curtose}
 
 \begin{enumerate}
-\item Se $K = 0,263 \Rightarrow $  A distribuição é Mesocúrtica;
-\item Se $K < 0,263 \Rightarrow $  A distribuição é concentrada ao redor da média, ou seja, é mais pontiaguda ou afunilada e menos dispersa, sendo classificada de Leptocúrtica;
-\item Se $K > 0,263 \Rightarrow $ A distribuição é mais dispersa ou Achatada, classificada de Platicúrtica;
+\item Se $K = 0,263 \Rightarrow$  A curva correspondente à distribuição de frequências é \textbf{Mesocúrtica};
+\item Se $K < 0,263 \Rightarrow$  A curva correspondente à distribuição é concentrada ao redor da média, ou seja, é mais pontiaguda ou afunilada e menos dispersa, sendo classificada de \textbf{Leptocúrtica};
+\item Se $K > 0,263 \Rightarrow$ A curva correspondente à distribuição de frequência é mais dispersa ou Achatada, classificada de \textbf{Platicúrtica};
 \end{enumerate}
