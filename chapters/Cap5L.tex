@@ -365,16 +365,45 @@ O verdadeiro desafio é saber apresentar os dados de forma interessante e atrati
 \newpage
 \section{Principais Tipos de Gráficos}
 
-\subsection{Ramo-e-Folhas}
+\subsection{Ramo-e-Folhas (\textit{Stem and Leaf})}
 
-Os gráficos chamados de ramo-e-folhas, talo-e-folhas ou \textit{Stem and leaf} foram criados em 1977 pelo estatístico americano Jhon Tukey. O mesmo fornece um meio prático de registrar as observações e podem ser usados como uma amostra direta dos dados ou um passo preliminar ma construção de uma tabela de frequência.\vst
-
-
+O diagrama de Ramo-e-Folhas, Talo-e-Folha, Caule-e-Folha ou \textit{Stem and leaf} foi desensvolvido em 1977 pelo estatístico americano Jhon Wilder Tukey. O mesmo fornece um meio prático de registrar as observações e podem ser usados como uma amostra direta dos dados ou um passo preliminar ma construção de uma tabela de frequência.\vst
 
 
+Para a construção de um diagrama ramo-e-folhas, não há regras fixas para construi-los, mas a idéia básica é dividir cada observação em duas partes: desenhe uma linha vertical e coloque os primeiros digitos de cada classe chamdo de (\textbf{ramos}) no lado esquerdo da linha vertical. Os números no lado direito da linha vertical representam o segundo dígito de cada observação, sendo estes as \textbf{folhas}.\vskip0.3cm
 
 
-Para a construção de um gráfico ramo-e-folhas, não há regras fixas para construi-los, mas a idéia básica é dividir cada observação em duas partes: desenhe uma linha vertical e coloque os primeiros digitos de cada classe (chamados de ramos) no lado esquerdo da linha vertical. Os números no lado direito da linha vertical representam o segundo dígito de cada observação, sendo estes as folhas.
+\begin{table}[!htb]
+    \centering
+    {
+    \caption{Exemplo Simples sobre o Diagrama de Ramos-e-Folhas, descrito em formato de Tabela de frequências.}
+    \label{ramosfolhas}
+    \vspace{0.1cm}
+\begin{tabular}{c|l|c}
+\hline
+ Ramo  &  Folhas & Frequência \\
+\hline  
+ 7  &  6                                   & 1  \\
+ 8  &  7                                   & 1  \\
+ 9  &  7                                   & 1  \\
+ 10 &  5, 1                                & 2  \\
+ 11 &  5, 8, 0                             & 3  \\
+ 12 &  1, 0, 3                             & 3  \\
+ 13 &  4, 1, 3, 5, 3, 5                    & 6  \\
+ 14 &  2, 9, 5, 8, 3, 1, 6, 9              & 8  \\
+ 15 &  4, 7, 1, 3, 4, 0, 8, 8, 6, 8, 0, 8  & 12 \\
+ 16 &  3, 0, 7, 3, 0, 5, 0, 8, 7, 9        & 10 \\
+ 17 &  8, 5, 4, 4, 1, 6, 2, 1, 0, 6        & 10 \\
+ 18 &  0, 3, 6, 1, 4, 1, 0                 & 7  \\
+ 19 &  9, 6, 0, 9, 3, 4                    & 6  \\
+ 20 &  7, 1, 0, 8                          & 4  \\
+ 21 &  8                                   & 1  \\
+ 22 &  1, 8, 9                             & 3  \\
+ 23 &  7                                   & 1  \\
+ 24 &  5                                   & 1  \\
+ \hline
+\end{tabular}}
+\end{table}
 
 
 % figura 1
@@ -567,7 +596,7 @@ Quando a variável é do tipo \textbf{Ordinal}, gráficos de colunas são mais i
 
 
 \newpage
-\subsection{Gráfico Radar}
+\subsection{Gráfico Radar ou Polar}
 
 O gráfico radar é utilizado para representar fenômenos cuja
 apresentação é feita em três ou mais variáveis quantitativas em eixos que partem do mesmo ponto. A sua análise exige mais
