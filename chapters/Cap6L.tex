@@ -870,7 +870,7 @@ Do ponto de vista visual, é fácil determinar a mediana a partir de um gráfico
 
 
 
-\subsection{Moda (MO)}
+\subsection{Moda (M_{o})}
 
 A moda é aquilo que esta em evidência, o valor que mais aparece num conjunto de informações ou o de maior freqüência em uma tabela. Em outras palavras, a moda tem a maior probabilidade de aocorrer. Sendo que a moda pode não ser única ou até mesmo pode não existir (SPIGEL et al, 2013).\vskip0.3cm
 
@@ -1201,19 +1201,26 @@ O coeficiente de variação é uma medida de dispersão relativa, e útil para c
 \newpage
 
 \section{Medidas de Ordenação ou Separatrizes}
+\subsection{Quartis $(Q_{i})$}
 
-\subsection{Quartis}
 
-Dividem (separam) uma Distribuição de Freqüência em 4 partes iguais
+
+
+
+
+Quartis são medidas que dividem (separam) uma amostra (ou coleção) de dados de tipo quantitativo (ou qualitativo ordinal) ordenada em 4 partes iguais (FEIJOO, 2010).
+
+
 
 \begin{enumerate}
-  \item[{1)}] No $1º$ Quartil ($Q_{1}$), 25\% dos elementos estarão abaixo dele e 75\%, acima.
-  \item[{2)}] No $2º$ Quartil ($Q_{2}$), 50\% dos elementos estarão abaixo dele e 50\%, acima. \vskip0.3cm
- Observe então que o $2º$ Quartil é igual à Mediana.
-  \item[{3)}] No $3º$ Quartil ($Q_{3}$), 75\% dos elementos estarão abaixo dele e 25\%, acima.
+  \item[{1)}] O 1º Quartil ou quartil inferior, representado por ($Q_{1}$) ou ($Q_{0,25}$), é o valor tal que pelo menos 25\% dos dados são não maiores do que ele e pelo menos 75\% dos dados são não menores do que ele;
+
+
+  
+  \item[{2)}] No 2º Quartil ($Q_{2}$), 50\% dos elementos estarão abaixo dele e 50\%, acima. Observe então que o 2º Quartil é igual à Mediana.
+  \item[{3)}] No 3º Quartil ($Q_{3}$), 75\% dos elementos estarão abaixo dele e 25\%, acima.
   \vskip0.3cm
- \item[{4)}] No $4º$ Quartil ($Q_{4}$), 100\% dos elementos estarão resumidos.
-  Observe então que o $4º$ quartil é igual a média artimética.
+ \item[{4)}] No 4º Quartil ($Q_{4}$), 100\% dos elementos estarão resumidos. Nota-se que o 4º quartil é igual a média artimética.
 \end{enumerate}
 
 
@@ -1222,10 +1229,13 @@ Para o cálculo do quartil utilizam-se os seguintes passos.
 
 
 \begin{enumerate}
-\item [{1°)}]Calcula-se primeira a posição do quartil na tabela.
-$$ P_{q_{i}}=\frac{i \times n}{4}$$
-\item [{2°)}] Posteriormente, marca-se na tabela a posição pela frequência acumulada, para identificar em qual classe estará o quartil.
-\item [{3°)}] Em seguida aplica-se a fórmula do quartil
+
+\item [{1°)}] Ordena-se os dados do menor para o maior;
+\item [{2°)}] Encontra-se a frequência acumulada da distribuição;
+\item [{3°)}]Calcula-se a posição do quartil na tabela.
+$$ P_{(q_{i})}=\frac{(i \times n)}{4}$$
+\item [{4°)}] Posteriormente, marca-se na tabela a posição pela frequência acumulada, para identificar em qual classe estará o quartil.
+\item [{5°)}] Em seguida aplica-se a fórmula do quartil
 \end{enumerate}
 
 \begin{equation}\label{}
@@ -1244,7 +1254,7 @@ $$ P_{q_{i}}=\frac{i \times n}{4}$$
 
 
 
-\subsection{Decis}
+\subsection{Decis $(D_{i})$}
 
 Dividem uma Distribuição de freqüência em 10 partes iguais.
 
@@ -1259,7 +1269,7 @@ Dividem uma Distribuição de freqüência em 10 partes iguais.
 
 \begin{enumerate}
 \item [{1)}]Calcula-se primeira a posição do decil na tabela.
-$$ P_{d_{i}}=\frac{i \times n}{10}$$
+$$ P_{(d_{i})}=\frac{(i \times n)}{10}$$
 \item [{2)}] Posteriormente, marca-se na tabela a posição pela frequência acumulada, para identificar em qual classe estará o decil.
 \item [{3)}] Em seguida aplica-se a fórmula do decil
 \end{enumerate}
@@ -1279,7 +1289,7 @@ $$ P_{d_{i}}=\frac{i \times n}{10}$$
 
 
 
-\subsection{Percentis}
+\subsection{Percentis $(P_{i})$}
 
 Dividem uma Distribuição de freqüência em 100 partes iguais. Então:
 
@@ -1297,7 +1307,7 @@ Dividem uma Distribuição de freqüência em 100 partes iguais. Então:
 
 \begin{enumerate}
 \item [{1)}]Calcula-se primeira a posição do percentil na tabela.
-$$ P_{p_{i}}=\frac{i \times n}{100}$$
+$$ P_{(p_{i})}=\frac{(i \times n)}{100}$$
 \item [{2)}] Posteriormente, marca-se na tabela a posição pela frequência acumulada, para identificar em qual classe estará o percentil.
 \item [{3)}] Em seguida aplica-se a fórmula do percentil
 \end{enumerate}
@@ -1337,11 +1347,11 @@ Uma medida usada muito freqüentemente para avaliar o grau de assimetria ou de d
 \begin{enumerate}
   \item [{1)}]Primeiro Coeficiente de Assimetria de Pearson
   \begin{equation}\label{assimetria}
-    AS= \frac{Media-Moda}{Desvio-Padrao} =\frac{\bar{X}-M_{o}}{S_{x}}
+    AS= \frac{(Media-Moda)}{(Desvio-Padrao)} =\frac{(\bar{X}-M_{o})}{S_{x}}
 \end{equation}
   \item [{2)}]Segundo Coeficiente de Assimetria de Pearson
   \begin{equation}\label{assimetria}
-    AS= \frac{Q_{3}+Q_{1}-2M_{e}}{Q_{3}-Q_{1}}
+    AS= \frac{(Q_{3}+Q_{1}-2M_{e})}{(Q_{3}-Q_{1})}
 \end{equation}
     ou
  \begin{equation}
