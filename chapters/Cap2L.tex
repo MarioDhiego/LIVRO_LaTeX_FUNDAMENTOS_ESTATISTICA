@@ -288,7 +288,7 @@ $$ A \cup \bar{A}= \Omega $$
 \inic Seja $\epsilon$ um experimento e $A$ um evento de um espaço amostral associado ao experimento $E$. Suponha-se que $E$ seja repetido $n$ vezes e seja $m$ o número de vezes que $A$ ocorre nas $n$ repetições de $E$. Então a fraquência relativa do evento $A$, anotada por $f_{r_{a}}$, é o quociente:
  
 \begin{equation}
-     f_{r_{a}}= \frac{m}{n}
+     f_{(r_{a})}= \left( \frac{m}{n} \right)
 \end{equation}
  
  
@@ -313,7 +313,7 @@ $$ A \cup \bar{A}= \Omega $$
 \inic Se $E$ um experimento aleatório e $S$ um espaço amostral formado por $n$ resultados igualmente prováveis. Seja $A \subseteq S$ um evento com $m$ elementos. A probabilidade de $A$, anotado por $P(A)$, lê-se $p$ de $A$, é definida como sendo:
   
 \begin{equation}
-     P(A)= \frac{m}{n}
+     P(A)= \left( \frac{m}{n} \right)
 \end{equation}
   
 \inic Isto é, a probabilidade do evento $A$ é o quociente entre o número $m$ de casos favoráveis e o número $n$ de casos possíveis.\vskip0.3cm
@@ -1605,7 +1605,7 @@ E(k)=k
 
 
 \begin{equation}\label{}
-E(kX)=k.E(X)
+E(kX)=k \times E(X)
 \end{equation}
 
 
@@ -1640,7 +1640,7 @@ E(X \pm Y)= E(X)\pm E(Y)
 
 
 \begin{equation}\label{}
-E(XY)= E(X)E(Y)
+E(XY)= E(X) \times E(Y)
 \end{equation}
 
 
@@ -1667,6 +1667,9 @@ Os princípios básicos da distribuição binomial foram desenvolvidos pelo mate
 
 Jakob nasceu em Basel na Suiça, estudou Teologia, Matemática e Astronomia na Universidade de Basel. Entre os nomes associados à instituição estão os de \textbf{Leonhard Euler}, \textbf{Friedrich Nietzsche}, e \textbf{Eugen Huber} um jurista famoso e criador do Código Civil Suiço. \vskip0.3cm
 
+
+
+\newpage
 Em homenagem a Jakob, os ensaios utilizando probabilidade binomial, na maioria das vezes são denominados \textbf{Ensaios de Bernoulli}, e uma sequência desse tipo de ensaios é denominado de \textbf{Processo de Bernoulli} 
 
 %\vskip0.3cm
@@ -1674,7 +1677,7 @@ Em homenagem a Jakob, os ensaios utilizando probabilidade binomial, na maioria d
 
 A distribuição Binomial dá a probabilidade de deterninado desfecho ocorrer em determinado número de ensaios independentes. \vskip0.3cm
 
-\newpage
+
 \inic A distribuição Binomial é uma distribuição discreta, cuja função de probabilidade é:
  
 \begin{equation}
@@ -1691,7 +1694,7 @@ Sendo: \vskip0.3cm
 \item $C_{n}^{y}$ = números de combinações de n elementos, tomados y a y; 
 \end{itemize} 
 
-%\newpage
+\newpage
 \subsection{Distribuição de Poisson}
 
 A distribuição de Poisson tem este nome em homenagem ao metemático, Astrônomo e físico francês \textbf{Simeon Denis Poisson}. Com característica próxima a Binomial, a distribuição de Poisson é uma distribuição descontínua, aplicável quando o resultado é o número de vezes que determinado evento ocorre. 
@@ -1705,7 +1708,7 @@ A distribuição de Poisson tem este nome em homenagem ao metemático, Astrônom
     \label{fig:my_label4}
 \end{figure}
 
-\newpage
+
 Poisson recebeu dois prêmios importantes da época:
 
 \begin{itemize}
@@ -1738,7 +1741,7 @@ Ainda, as falhas não são contáveis. Por exemplo, não é possível contar os 
  
  
 \begin{equation}
-    P\left(X=k\right)= \frac{e^{-\lambda}\lambda^{k}}{k!}
+    P\left(X=k\right)= \left( \frac{e^{-\lambda}\lambda^{k}}{k!} \right)
 \end{equation}
 
 onde:
@@ -1783,6 +1786,7 @@ A curva foi descoberta pela primeira vez pelo matemático francês \textbf{Abrah
 
 %ABRAHAM DE MOIVRE. In: WIKIPÉDIA, a enciclopédia livre. Flórida: Wikimedia Foundation, 2022. Disponível em: <https://pt.wikipedia.org/w/index.php?title=Abraham_de_Moivre&oldid=64507244>. Acesso em: 4 out. 2022.
 
+\vskip0.3cm 
 Diversos autores consideram Laplace como tendo realizado as maiores contribuição à teoria da probabilidade, mas foi dado o nome de Gauss para a distribuição depois de ele tê-la aplicado a teoria dos movimentos dos corpos celestes.\vskip0.3cm 
 
 
@@ -1825,7 +1829,7 @@ William Sealy Gosset nasceu em 13 de junho de 1876 em Canterbury, Inglaterra, o 
 \end{figure}
 
 
-\newpage
+
 Ao final do século XIX, a famosa \textbf{Arthur Guinness Son and Company} era a maior cervejaria do mundo, e foi pioneira em diversos esforços para o Controle de Qualidade. Em 1899, um dos contratados para o cargo de químico, recém-formado na Universidade de Oxford, com 23 anos de idade e um currículo que combinava matemática e estatística, foi \textbf{William Sealy Gosset}.\vskip0.3cm
 
 %\begin{figure}[!htb]
@@ -1836,8 +1840,9 @@ Ao final do século XIX, a famosa \textbf{Arthur Guinness Son and Company} era a
 %\end{figure}
 
 
-A Guinness era uma empresa de Agro-Química progressista e Gosset iria aplicar os seus conhecimentos de estatística tanto na cervejaria (a destilaria) como nas quintas, para a selecção dos melhores espécimens de cevada.\vskip0.3cm
+A \textit{Guinness} era uma empresa de Agro-Química progressista e Gosset iria aplicar os seus conhecimentos de estatística tanto na cervejaria (a destilaria) como nas quintas, para a selecção dos melhores espécimens de cevada.\vskip0.3cm
 
+\newpage
 O trabalho de Gosset na Guinness consistia em medir os inúmeros fatores do processo de produção e ponderar como eles se relacionam aos resultados do produto final. William realizou muitos testes para estimar a duração da cerveja diante das diferentes condições de armazenagem, fabricação e transporte.\vskip0.3cm
 
 
@@ -1854,8 +1859,8 @@ Em outubro de 2012, uma placa foi inaugurada na Escola Nacional de St Patrick, B
 
 
 
-
-\subsubsection{A Distribuição $t$ }
+\newpage
+\subsubsection{A Distribuição $t$ \textit{student}}
 
 Seja a variável aleatória:
 
@@ -1880,7 +1885,7 @@ f\left(t\right)=\frac{1}{\sqrt{k \pi}}\frac{\Gamma\left(\frac{k+1}{2}\right) }{\
 Sir \textbf{Ronald Fisher} o arquiteto da estatística experimental, um gigante entre os estatísticos, chamou Gosset de “O Faraday das Estatísticas”, reconhecendo sua capacidade de compreender princípios gerais e aplicá-los a problemas de importância prática (SALSBURG, 2000).
 
 
-%\newpage
+\newpage
 \subsubsection{Ronald Aylmer Fisher}
 
 Ronald Aylmer Fisher foi um estatístico, biológo e geneticista, nasceu em 17 de fevereiro de 1890, em East Finchley, Londres, sendo considerado um dos pais e o fundador da estatística moderna (BOX, 1978).\vskip0.3cm
