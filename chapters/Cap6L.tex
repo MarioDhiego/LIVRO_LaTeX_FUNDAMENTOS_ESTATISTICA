@@ -254,7 +254,7 @@ Sejam $x_{1}, x_{2}, ..., x_{n}$, os elementos de um rol numérico, valores part
 
 
 \begin{equation}\label{media1}
-\bar{X}=\frac{x_{1}+x_{2}+x_{3}+\ldots+x_{n}}{n}= \frac{\sum_{i=1}^{n}x_{i}}{n}
+\bar{X}= \left[ \frac{x_{1}+x_{2}+x_{3}+\ldots+x_{n}}{n} \right ] = \left[ \frac{\sum_{i=1}^{n}x_{i}}{n} \right ]
 \end{equation}
 
 
@@ -273,11 +273,11 @@ Seja $x$ uma variável que assume valores $x_{1},x_{2},\ldots,x_{n}$ com frequê
 
 
 $$
-\Bar{x}_{1}=\frac{x_{11},x_{12},\ldots, x_{1_{n_{1}}}}{n_{1}}
+\Bar{x}_{1}=  \left[ \frac{x_{11},x_{12},\ldots, x_{1_{n_{1}}}}{n_{1}} \right ]
 $$
 
 $$
-\Bar{x}_{2}=\frac{x_{21},x_{22},\ldots, x_{2_{n_{2}}}}{n_{2}}
+\Bar{x}_{2} =  \left[ \frac{x_{21},x_{22},\ldots, x_{2_{n_{2}}}}{n_{2}} \right ]
 $$
 
 $$
@@ -285,17 +285,17 @@ $$
 $$
 
 $$
-\Bar{x}_{k}=\frac{x_{k1},x_{k2},\ldots, x_{k_{n_{k}}}}{n_{k}}
+\Bar{x}_{k} = \left[ \frac{x_{k1},x_{k2},\ldots, x_{k_{n_{k}}}}{n_{k}}  \right ]
 $$
 
 com isso, 
 
 $$
-p_{1}\Bar{x}_{1}=x_{11},x_{12},\ldots, x_{1_{p_{1}}}
+p_{1}\Bar{x}_{1} = [x_{11},x_{12},\ldots, x_{1_{p_{1}}}]
 $$
 
 $$
-p_{2}\Bar{x}_{2}=x_{21},x_{22},\ldots, x_{2_{p_{2}}}
+p_{2}\Bar{x}_{2} = [x_{21},x_{22},\ldots, x_{2_{p_{2}}}]
 $$
 
 $$
@@ -303,20 +303,20 @@ $$
 $$
 
 $$
-p_{k}\Bar{x}_{k}=x_{k1},x_{k2},\ldots, x_{k_{p_{k}}}
+p_{k}\Bar{x}_{k} = [x_{k1},x_{k2},\ldots, x_{k_{p_{k}}}]
 $$
 
 Assim, a média aritmética de todos os números é:
 
 $$
-\Bar{x}=\frac{(x_{11},x_{12}+\ldots+x_{1_{n_{1}}})+(x_{21}+x_{22}+\ldots+x_{2_{n_{2}}})+(x_{k_{1}}+x_{k_{2}}+\ldots+x_{k_{n_{k}}})}{p_{1}+p_{2}+\ldots+p_{k}}
+\Bar{x} = \left[ \frac{(x_{11},x_{12}+\ldots+x_{1_{n_{1}}})+(x_{21}+x_{22}+\ldots+x_{2_{n_{2}}})+(x_{k_{1}}+x_{k_{2}}+\ldots+x_{k_{n_{k}}})}{p_{1}+p_{2}+\ldots+p_{k}} \right ]
 $$
 
 
 logo a expressão é equivalente a
 
 \begin{equation}\label{media}
-    \bar{X}= \frac{(p_{1}\Bar{x}_{1})+(p_{2}\Bar{x}_{2})+\ldots+(p_{k}\Bar{x}_{k})}{p_{1}+p_{2}+\ldots+p_{k}}=\frac{\sum_{i=1}^{n}x_{i}p_{i}}{\sum_{i=1}^{n}p_{i}}
+    \bar{X} =  \left[ \frac{(p_{1}\Bar{x}_{1})+(p_{2}\Bar{x}_{2})+\ldots+(p_{k}\Bar{x}_{k})}{p_{1}+p_{2}+\ldots+p_{k}} \right ]  =   \left[ \frac{\sum_{i=1}^{n}x_{i}p_{i}}{\sum_{i=1}^{n}p_{i}} \right ]
 \end{equation}
 
 
@@ -339,7 +339,7 @@ A média aritmética possui as seguintes propriedades (SILVA, 2011), (SPIGEL et 
 Sejam  $x_{1}=b, x_{2}=b, ..., x_{n}=b$, por definição da média aritimética conforme a equação \ref{media1} tem-se que: $x_{1}=x_{2}=,..., x_{n}=b$, então a expressão \ref{media1} equivale a
 
 \begin{equation*}\label{propriedade1}
-\bar{x}=\frac{b+b+...+b}{n}=\frac{nb}{n}=b
+\bar{x} = \left[ \frac{b+b+...+b}{n} \right ] = \left [\frac{nb}{n} \right ]= b
 \end{equation*}
  
 
@@ -371,13 +371,13 @@ x_{i}+x_{i}+x_{i}+\ldots+x_{i} \leq n \Bar{x}
 que é equivalente a 
 
 \begin{equation*}\label{propriedade1}
-\frac{x_{i}+x_{i}+x_{i}+\ldots+x_{i}}{n} \leq \Bar{x}
+\left[ \frac{x_{i}+x_{i}+x_{i}+\ldots+x_{i}}{n}  \right ] \leq \Bar{x}
 \end{equation*}
 
 que equivale a 
 
 \begin{equation*}\label{propriedade1}
-\frac{nx_{i}}{n} \leq \Bar{x}
+\left[ \frac{nx_{i}}{n} \right ]  \leq \Bar{x}
 \end{equation*}
 
 Logo,
@@ -417,13 +417,13 @@ x_{i}+x_{i}+x_{i}+\ldots+x_{i} \geq n \Bar{x}
 que é equivalente a 
 
 \begin{equation*}\label{propriedade1}
-\frac{x_{i}+x_{i}+x_{i}+\ldots+x_{i}}{n} \geq \Bar{x}
+\left[ \frac{x_{i}+x_{i}+x_{i}+\ldots+x_{i}}{n} \right ] \geq \Bar{x}
 \end{equation*}
 
 que equivale a 
 
 \begin{equation*}\label{propriedade1}
-\frac{nx_{n}}{n} \geq \Bar{x}
+\left[ \frac{n \times x_{n}}{n} \right ] \geq \Bar{x}
 \end{equation*}
 
 Logo,
@@ -498,15 +498,15 @@ $$(c_{1}x_{1}),(c_{2}x_{2}),...,(c_{n}x_{n})$$
 a nova média é dada por:
 
 \begin{equation*}\label{media3}
-     \bar{x}=\frac{(c_{1}x_{1})+(c_{2}x{2})+(c_{3}x{3})+\ldots+(c_{n}x{n})}{n} 
+     \bar{x} =  \left[ \frac{(c_{1}x_{1})+(c_{2}x{2})+(c_{3}x{3})+\ldots+(c_{n}x{n})}{n} \right]
 \end{equation*}
 
 \begin{equation*}\label{media3}
-     \bar{x}=\frac{c(x_{1}+x_{2}+x_{3}+\ldots+x_{n})}{n} 
+     \bar{x} = \left[ \frac{c(x_{1}+x_{2}+x_{3}+\ldots+x_{n})}{n} \right]
 \end{equation*}
 
 \begin{equation*}\label{media3}
-     \bar{x}=c \left(\frac{(x_{1}+x_{2}+x_{3}+\ldots+x_{n})}{n} \right)
+     \bar{x}=c \left[\frac{(x_{1}+x_{2}+x_{3}+\ldots+x_{n})}{n} \right]
 \end{equation*}
 
 
@@ -531,19 +531,19 @@ $$\left( \frac{x_{1}}{c_{1}} \right), \left( \frac{x_{2}}{c_{2}} \right),..., \l
 a nova média é dada por:
 
 \begin{equation*}\label{media3}
-     \bar{x}= \frac{\left( \frac{x_{1}}{c_{1}} \right)+ \left( \frac{x_{2}}{c_{2}} \right)+ \left( \frac{x_{3}}{c_{3}}\right)+\ldots+\left( \frac{x_{n}}{c_{n}} \right)}{n}
+     \bar{x} = \left[ \frac{\left( \frac{x_{1}}{c_{1}} \right)+ \left( \frac{x_{2}}{c_{2}} \right)+ \left( \frac{x_{3}}{c_{3}}\right)+\ldots+\left( \frac{x_{n}}{c_{n}} \right)}{n} \right]
 \end{equation*}
 
 \begin{equation*}\label{media3}
-     \bar{x}= \frac{ \frac{1}{c} \left( x_{1}+x_{2}+x_{3}+\ldots+x_{n} \right)}{n}
+     \bar{x}= \left[ \frac{ \frac{1}{c} \left( x_{1}+x_{2}+x_{3}+\ldots+x_{n} \right)}{n} \right]
 \end{equation*}
 
 \begin{equation*}\label{media3}
-     \bar{x}= \frac{1}{c} \left( \frac{x_{1}+x_{2}+x_{3}+\ldots+x_{n}}{n} \right)
+     \bar{x}= \frac{1}{c} \left[ \frac{x_{1}+x_{2}+x_{3}+\ldots+x_{n}}{n} \right]
 \end{equation*}
 
 \begin{equation*}\label{media3}
-     \bar{x}= \frac{\bar{x}}{c_{i}}
+     \bar{x}= \left[ \frac{\bar{x}}{c_{i}} \right]
 \end{equation*}
 
 Com isso, a média aritmética sofreu a mesma operação que os valores de $x_{i}$.
@@ -560,11 +560,12 @@ Sejam $x_{1}, x_{2},...,x_{n}$ os valores assumidos por uma variável $x$ e $\Ba
 Considera-se que os novos valores assumidos por essa variável sejam: $(x_{1}+c),(x_{2}+c),...,(x_{n}+c)$, a nova média é dada por:
 
 \begin{equation*}\label{media3}
-     \bar{x}= \frac{\sum_{i=1}^{n}(x_{i}+c)}{n}=\frac{(x_{1}+c)+(x_{2}+c)+...+(x_{n}+c)}{n} 
+     \bar{x} = \left[ \frac{\sum_{i=1}^{n}(x_{i}+c)}{n} \right] =  \left[  \frac{(x_{1}+c)+(x_{2}+c)+...+(x_{n}+c)}{n} \right]
 \end{equation*}
 
 \begin{equation*}\label{media4}
-  =\frac{(x_{1})+(x_{2})+...+(x_{n})}{n}+ \overbrace{\frac{c+c+...+c}{n}}^{n}+\frac{\sum_{i=1}^{n}x_{i}}{n}=\frac{nc}{c}
+  = \left[ \frac{(x_{1})+(x_{2})+...+(x_{n})}{n} \right] +  \left[ \overbrace{\frac{c+c+...+c}{n}}^{n} \right]+ 
+ \left[ \frac{\sum_{i=1}^{n}x_{i}}{n}\right] = \left[ \frac{n \times c}{c} \right]
 \end{equation*}
 
 isto é, 
@@ -583,11 +584,11 @@ Sejam $x_{1}, x_{2},...,x_{n}$ os valores assumidos por uma variável $x$ e $\Ba
 Considera-se que os novos valores assumidos por essa variável sejam: $(x_{1}-c),(x_{2}-c),...,(x_{n}-c)$, a nova média é dada por:
 
 \begin{equation}\label{media3}
-     \bar{x}= \frac{\sum_{i=1}^{n}(x_{i}-c)}{n}=\frac{(x_{1}-c)+(x_{2}-c)+...+(x_{n}-c)}{n} 
+     \bar{x} = \left[ \frac{\sum_{i=1}^{n}(x_{i}-c)}{n} \right] = \left[ \frac{(x_{1}-c)+(x_{2}-c)+...+(x_{n}-c)}{n} \right] 
 \end{equation}
 
 \begin{equation*}\label{media4}
-  =\frac{(x_{1})+(x_{2})+...+(x_{n})}{n}- \overbrace{\frac{c-c-...-c}{n}}^{n}+\frac{\sum_{i=1}^{n}x_{i}}{n}=- \frac{nc}{c}
+  = \left[ \frac{(x_{1})+(x_{2})+...+(x_{n})}{n} \right] - \left[ \overbrace{\frac{c-c-...-c}{n}}^{n} \right] + \left[ \frac{\sum_{i=1}^{n}x_{i}}{n} \right] = \left[ - \frac{n \times c}{c} \right]
 \end{equation*}
 
 isto é, 
@@ -621,8 +622,8 @@ Se os números $x_{1},x_{2},x_{3},\ldots, x_{n}$ ocorrerem $f_{1}, f_{2}, f_{3},
 
 
 \begin{equation}\label{media2}
-     \bar{X}= \frac{x_{1}f_{1}+x_{2}f_{2}+x_{3}f_{3}+
- \ldots+x_{n}f_{n}}{f_{1}+f_{2}+f_{3}+\ldots+f_{n}} = \frac{\sum_{i=1}^{n}f_{i}x_{i}}{\sum_{i=1}^{n}f_{i}}
+     \bar{X}= \left[ \frac{x_{1}f_{1}+x_{2}f_{2}+x_{3}f_{3}+
+ \ldots+x_{n}f_{n}}{f_{1}+f_{2}+f_{3}+\ldots+f_{n}} \right ]=   \left[\frac{\sum_{i=1}^{n}f_{i}x_{i}}{\sum_{i=1}^{n}f_{i}} \right ]
 \end{equation}
 
 \subsection{Média Geométrica Simples ($\bar{X}_{g}$)}
@@ -680,15 +681,15 @@ aritmética das recíprocas dos números, ou seja,
 
 
 \begin{equation}\label{harmonica1}
-H=(\frac{(\frac{1}{x_{1}})+(\frac{1}{x_{2}})+\ldots+(\frac{1}{x_{n}})}{n})^{-1}
+H= \left[ \frac{  (\frac{1}{x_{1}})+(\frac{1}{x_{2}})+\ldots+(\frac{1}{x_{n}})  }{n} \right ]  ^{-1} 
 \end{equation}
 
 \begin{equation*}\label{harmonica1}
- =(\frac{n}{\frac{1}{X_{1}}+\frac{1}{X_{2}}+\ldots+\frac{1}{X_{n}}})
+ =\left[  \frac{n}{\frac{1}{X_{1}}+\frac{1}{X_{2}}+\ldots+\frac{1}{X_{n}}}  \right ]
 \end{equation*}
 
 \begin{equation*}\label{harmonica}
-=\frac{1}{\frac{1}{N}\sum_{i=1}^{n}\frac{1}{X_{i}}}
+=\left[  \frac{1}{\frac{1}{N}\sum_{i=1}^{n}\frac{1}{X_{i}}} \right ]
 \end{equation*}
 
 \vskip0.3cm
@@ -696,7 +697,7 @@ H=(\frac{(\frac{1}{x_{1}})+(\frac{1}{x_{2}})+\ldots+(\frac{1}{x_{n}})}{n})^{-1}
 \textbf{Exemplor Prático}: Os Agentes de Fiscalização de Trânsito do DETRAN-PA, fazem o acompanhamento tático da imagem de Nossa senhora de Nazaré durante o mês de outubro (\textbf{Círio de Nazaré}). Viajando de Belém para Marituba à velocidade média de 30 km/h e volta de Marituba para Belém, pelo mesmo caminho, à velocidade média de 60 km/h. Qual a velocidade média para a viagem completa.
 
 \begin{equation}\label{exemplo_harmonica}
-Velocidade \ \  Media = \frac{2}{\frac{1}{30}+\frac{1}{60}} = 40 km/h
+Velocidade \ \  Media = \left[\frac{2}{\frac{1}{30}+\frac{1}{60}} \right ]= 40 km/h
 \end{equation}
 
 
@@ -707,7 +708,7 @@ Se os dados estiverem agrupados sob a forma de distribuição por classe de valo
 
 
 \begin{equation}\label{harmonicapondrada}
-    \bar{X}_{H}=\frac{\sum_{i=1}^{n}p_{i}}{\frac{p_{1}}{X_{1}}+\frac{p_{2}}{X_{2}}+\ldots+\frac{p_{n}}{X_{n}}}=\frac{\sum_{i=1}^{n}p_{i}}{\sum_{i=1}^{n}\frac{p_{i}}{x_{i}}}
+    \bar{X}_{H}= \left[  \frac{\sum_{i=1}^{n}p_{i}}{\frac{p_{1}}{X_{1}}+\frac{p_{2}}{X_{2}}+\ldots+\frac{p_{n}}{X_{n}}}\right ] = \left[  \frac{\sum_{i=1}^{n}p_{i}}{\sum_{i=1}^{n}\frac{p_{i}}{x_{i}}} \right ]
 \end{equation}
 
 
@@ -732,7 +733,7 @@ extravagantes, recorre-se ao conceito de média aparada. \vskip0.3cm
 A média aparada (\textbf{trimmed mean}) é uma medida de localização resistente, cuja sensibilidade a pontos aberrantes ou chamados outliers, é reduzida por remover uma proporção especificada da observação maior e menor, ou seja, elimina os valores extremos. Se a proporção de observações omitida de cada lado é $\alpha$, então a média dos $\alpha$ dados cortados é dada por:
 
 \begin{equation}\label{aparada}
-    \bar{X}_{\alpha}=\frac{1}{n-2k}\sum_{i=k+1}^{n-k}X_{i}
+    \bar{X}_{\alpha} = \left[\frac{1}{n-2k} \right] \sum_{i=k+1}^{n-k}X_{i}
 \end{equation}
 
 Onde k é o valor inteiro arredondado do produto $\alpha n$, o número de valores de dados "cortados" de cada cauda. A média aparada reduz-se à média aritmética quando $\alpha = 0$.
@@ -774,7 +775,7 @@ Para valores agrupados em classes de frequência, a mediana será calculada atra
 \begin{enumerate}
 \item [{1°)}] Completar a tabela criando a coluna para as frequências acumulada, caso não haja essa coluna;
 \item [{2°)}]Identificar a classe da mediana, procurando o elemento que ocupa a posição.
-$$ P_{i}=\frac{\sum_{i=1}^{n}f_{i}}{2}$$
+$$ P_{i} = \left[\frac{\sum_{i=1}^{n}f_{i}}{2} \right]  $$
 \item [{3°)}] Posteriormente, marca-se na tabela a posição, para identificar em qual classe estará a mediana.
 \item [{4°)}] Em seguida aplica-se a fórmula da mediana
 \end{enumerate}
@@ -825,7 +826,7 @@ $1° \mbox{\textbf{Passo}}:$ Inicialmente vamos completar a tabela criando a col
 
 $2° \mbox{\textbf{Passo}}:$ Identificar a classe da mediana, procurando o elemento que ocupa a seguinte posição
 
-$$ P=\frac{n}{2}=\frac{50}{2}=25 $$
+$$ P= \left[ \frac{n}{2} \right] = \left[ \frac{50}{2} \right] = 25 $$
 
 O 25° elemento, se encontra na classe 3, portanto a mediana se encontra o intervalo $ 4 \vdash 6$.
 
@@ -899,7 +900,7 @@ O uso da moda é mais indicado quando se deseja obter, rapidamente, uma medida d
 É o ponto médio da classe que contém, a moda. Trata-se de um cálculo bruto, sem precisão.
 
 \begin{equation}\label{}
-    M_{0}= \frac{l_{mo}+L_{mo}}{2}
+    M_{0}= \left[\frac{l_{mo}+L_{mo}}{2}\right]
 \end{equation}
 
 
@@ -1132,7 +1133,7 @@ Dispõe-se de várias medidas de dispersão ou de variação, sendo as mais comu
 \subsection{Desvio Médio (DM)}
 
 \begin{equation}\label{dn}
-    DM=\frac{\sum_{i=1}^{n}|(x_{i}-\bar{X})|}{n}
+    DM= \left[  \frac{\sum_{i=1}^{n}|(x_{i}-\bar{X})|}{n} \right]
 \end{equation}
 
 \newpage 
@@ -1142,10 +1143,10 @@ Dispõe-se de várias medidas de dispersão ou de variação, sendo as mais comu
 A variância amostral de um conjunto de dados $x_{1},x_{2},\ldots,x_{n}$ , é assim definida:
 
 \begin{eqnarray}\nonumber
-S^{2}=\frac{(x_{1}-\bar{X})^{2}+(x_{2}-\bar{X})^{2}+\ldots+(x_{n}-\bar{X})^{2}}{n-1}
+S^{2} = \left[ \frac{(x_{1}-\bar{X})^{2}+(x_{2}-\bar{X})^{2}+\ldots+(x_{n}-\bar{X})^{2}}{n-1} \right]
     & = &  \\
-    \frac{\sum_{i=1}^{n}(x_{i}-\bar{X})^{2}}{n-1}& = &  \\ \nonumber
-    \frac{\sum_{i=1}^{n}x_{i}^{2}-\frac{(\sum_{i=1}^{n}x_{i})^{2}}{n}}{n-1} &  &
+    \left[ \frac{\sum_{i=1}^{n}(x_{i}-\bar{X})^{2}}{n-1} \right]  & = &  \\ \nonumber
+    \left[ \frac{\sum_{i=1}^{n}x_{i}^{2}-\frac{(\sum_{i=1}^{n}x_{i})^{2}}{n}}{n-1} \right] &  &
 \end{eqnarray}
 
 
@@ -1153,10 +1154,10 @@ S^{2}=\frac{(x_{1}-\bar{X})^{2}+(x_{2}-\bar{X})^{2}+\ldots+(x_{n}-\bar{X})^{2}}{
 
 
 \begin{eqnarray}\nonumber
-S^{2}=\frac{(x_{1}-\bar{X})^{2}f_{1}+(x_{2}-\bar{X})^{2}f_{2}+\ldots+(x_{n}-\bar{X})^{2}f_{n}}{n-1}
+S^{2} = \left[ \frac{(x_{1}-\bar{X})^{2}f_{1}+(x_{2}-\bar{X})^{2}f_{2}+\ldots+(x_{n}-\bar{X})^{2}f_{n}}{n-1} \right]
     & = &  \\
-    \frac{\sum_{i=1}^{n}(x_{i}-\bar{X})^{2}f_{i}}{n-1}& = &  \\ \nonumber
-    \frac{\sum_{i=1}^{n}x_{i}^{2}f_{i}-\frac{(\sum_{i=1}^{n}x_{i}f_{i})^{2}}{n}}{n-1} &  &
+    \left[ \frac{\sum_{i=1}^{n}(x_{i}-\bar{X})^{2}f_{i}}{n-1} \right]  & = &  \\ \nonumber
+    \left[ \frac{\sum_{i=1}^{n}x_{i}^{2}f_{i}-\frac{(\sum_{i=1}^{n}x_{i}f_{i})^{2}}{n}}{n-1} \right] &  &
 \end{eqnarray}
 
 
@@ -1166,7 +1167,7 @@ S^{2}=\frac{(x_{1}-\bar{X})^{2}f_{1}+(x_{2}-\bar{X})^{2}f_{2}+\ldots+(x_{n}-\bar
 Uma medida ainda mais elaborada de dispersão é conhecida como "Variância Aparada" (trimmed variance). A idéia, como para a "média aparada", é omitir uma proporção dos maiores e menores valores e calcular o análogo da variância amostral:
 
 \begin{equation}\label{varAparada}
-    S_{\alpha}^{2}=\frac{1}{n-2k}\sum_{i=k+1}^{n-k}(X_{i}-\bar{X}_{\alpha})^{2}
+    S_{\alpha}^{2} = \left[\frac{1}{n-2k}\right]\sum_{i=k+1}^{n-k}(X_{i}-\bar{X}_{\alpha})^{2}
 \end{equation}
 
 
@@ -1195,7 +1196,7 @@ O coeficiente de variação é uma medida de dispersão relativa, e útil para c
 
 
 \begin{equation}\label{CV}
-    CV= \frac{S}{\bar{X}}*100
+    CV= \left[ \frac{S}{\bar{X}} \right]*100
 \end{equation}
 
 \newpage
@@ -1233,7 +1234,7 @@ Para o cálculo do quartil utilizam-se os seguintes passos.
 \item [{1°)}] Ordena-se os dados do menor para o maior;
 \item [{2°)}] Encontra-se a frequência acumulada da distribuição;
 \item [{3°)}]Calcula-se a posição do quartil na tabela.
-$$ P_{(q_{i})}=\frac{(i \times n)}{4}$$
+$$ P_{(q_{i})} = \left[ \frac{(i \times n)}{4}  \right] $$
 \item [{4°)}] Posteriormente, marca-se na tabela a posição pela frequência acumulada, para identificar em qual classe estará o quartil.
 \item [{5°)}] Em seguida aplica-se a fórmula do quartil
 \end{enumerate}
@@ -1269,7 +1270,7 @@ Dividem uma Distribuição de freqüência em 10 partes iguais.
 
 \begin{enumerate}
 \item [{1)}]Calcula-se primeira a posição do decil na tabela.
-$$ P_{(d_{i})}=\frac{(i \times n)}{10}$$
+$$ P_{(d_{i})} = \left[ \frac{(i \times n)}{10} \right] $$
 \item [{2)}] Posteriormente, marca-se na tabela a posição pela frequência acumulada, para identificar em qual classe estará o decil.
 \item [{3)}] Em seguida aplica-se a fórmula do decil
 \end{enumerate}
@@ -1307,7 +1308,7 @@ Dividem uma Distribuição de freqüência em 100 partes iguais. Então:
 
 \begin{enumerate}
 \item [{1)}]Calcula-se primeira a posição do percentil na tabela.
-$$ P_{(p_{i})}=\frac{(i \times n)}{100}$$
+$$ P_{(p_{i})} = \left[ \frac{(i \times n)}{100} \right] $$
 \item [{2)}] Posteriormente, marca-se na tabela a posição pela frequência acumulada, para identificar em qual classe estará o percentil.
 \item [{3)}] Em seguida aplica-se a fórmula do percentil
 \end{enumerate}
@@ -1347,15 +1348,15 @@ Uma medida usada muito freqüentemente para avaliar o grau de assimetria ou de d
 \begin{enumerate}
   \item [{1)}]Primeiro Coeficiente de Assimetria de Pearson
   \begin{equation}\label{assimetria}
-    AS= \frac{(Media-Moda)}{(Desvio-Padrao)} =\frac{(\bar{X}-M_{o})}{S_{x}}
+    AS = \left[ \frac{(Media-Moda)}{(Desvio-Padrao)} \right] = \left[  \frac{(\bar{X}-M_{o})}{S_{x}} \right]
 \end{equation}
   \item [{2)}]Segundo Coeficiente de Assimetria de Pearson
   \begin{equation}\label{assimetria}
-    AS= \frac{(Q_{3}+Q_{1}-2M_{e})}{(Q_{3}-Q_{1})}
+    AS = \left[ \frac{(Q_{3}+Q_{1}-2M_{e})}{(Q_{3}-Q_{1})} \right]
 \end{equation}
     ou
  \begin{equation}
-    AS = \frac{3(\bar{X}-M_{e})}{S_{x}}
+    AS = \left[ \frac{3(\bar{X}-M_{e})}{S_{x}} \right]
 \end{equation}
 \end{enumerate}
 
@@ -1408,7 +1409,7 @@ As medidas de tendência  central possuem algumas vantagens e desvantagens. A m�
 Para avaliar o grau de curtose de uma curva ou distribuição de freqüências, usa-se o Coeficiente Percentílico de Curtose (K):
 
 \begin{equation}\label{curtose}
-    K=\frac{Q_{3}-Q_{1}}{2(D_{9}-D_{1})}
+    K = \left[ \frac{(Q_{3}-Q_{1})}{2(D_{9}-D_{1})} \right]
 \end{equation}
 
 Onde
@@ -1430,13 +1431,13 @@ pelos percentis $P_{90}=D_{9}$ e $P_{10}=D_{1}$, quando for o caso.
 Uma outra forma de representar o coeficiente de Curtose é da seguinte maneira
 
 \begin{equation}\label{curtose2}
-    K= \frac{C}{D_{9}-D_{1}}
+    K= \left[ \frac{C}{D_{9}-D_{1}} \right]
 \end{equation}
 
 onde o C é chamado de amplitude semi-interquartilica
 
 \begin{equation}\label{curtose2}
-    C= \frac{Q_{3}-Q_{1}}{2}
+    C= \left[ \frac{Q_{3}-Q_{1}}{2} \right]
 \end{equation}
 
 
