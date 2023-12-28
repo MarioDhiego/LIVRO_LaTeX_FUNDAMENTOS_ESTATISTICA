@@ -1179,21 +1179,44 @@ Uma medida ainda mais elaborada de dispersão é conhecida como "Variância Apar
 Onde k é o inteiro mais próximo de $\alpha n$. Veja que é feita a média do quadrado dos desvios entre o valor e as médias aparadas consistentes (de acordo com a \label{aparada}). A variância aparada é algumas vezes multiplicada por um fator de ajuste para fazê-la mais consistente com a variância amostral ($S^{2}$).
 
 
-\subsection{Desvio Padrão (DP)}
+\subsection{Desvio Padrão (s)}
 
-Definido como a raiz quadrada positiva da variância, o desvio-padrão exerce grande vantagem sobre a variância, já que ele é apresentado na mesma unidade de medida dos dados brutos. Trata-se da mais importante das medidas de variabilidade, onde indica a dispersão média absoluta dos dados em torno da própria média aritmética. O desvio-padrão pode ser assim obtido de duas maneiras:\vskip0.3cm
+Definido como a raiz quadrada positiva da variância, o desvio-padrão exerce grande vantagem sobre a variância, já que ele é apresentado na mesma unidade de medida dos dados brutos. Trata-se da mais importante das medidas de variabilidade, onde indica a dispersão média absoluta dos dados em torno da própria média aritmética. Também chamado \textbf{afastamento médio quadrático}, o desvio-padrão pode ser assim obtido de duas maneiras:\vskip0.3cm
 
-Para dados brutos, dp será
-
-\begin{equation}\label{dp}
-    DP= \sqrt{\frac{\sum_{i=1}^{n}(x_{i}-\bar{X})^{2}}{n-1}} = \sqrt{S^{2}}
-\end{equation}
-
-Já para dados tabulados, ficará
+O desvio-padrão amostral de uma amostra de n valores quantitativos $x_{1}, x_{2}, \cdots, x_{n}$ não-tabelados é calculado mediante:
 
 \begin{equation}\label{dp}
-    DP= \sqrt{\frac{\sum_{i=1}^{n}(x_{i}-\bar{X})^{2}f_{i}}{n-1}} = \sqrt{S^{2}}
+    S = \sqrt{\frac{\sum_{i=1}^{n}(x_{i}-\bar{X})^{2}}{n-1}} = \sqrt{S^{2}}
 \end{equation}
+
+Onde:
+
+\begin{itemize}
+    \item $S$: é o desvio-padrão da amostra;
+    \item $n$: é é o número total de observações na amostra;
+    \item $X_{i}$ representa cada valor individual na amostra;
+    \item $\hat{X}_{i}$ é a média da amostra, calculada como $\hat{X}=\frac{\sum_{i=1}^{n} x_{i}}{n}$.
+\end{itemize}
+\vskip0.3cm
+
+Já para dados tabulados, agrupados em classe de frequência usa-se
+
+\begin{equation}\label{dp}
+    S = \sqrt{\frac{\sum_{i=1}^{k}(x_{i}-\bar{X})^{2}f_{i}}{n-1}} = \sqrt{S^{2}}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+    \item $S$: é o desvio-padrão da amostra;
+    \item $k$: é é o número de classes;
+    \item $f_{i}$: é a frequência da classe i;
+    \item $n$: é o número total de observações na amostra (soma das frequências);
+    \item $x_{i}$: é o ponto médio de cada classe;
+    \item $\hat{X}_{i}$ é a média ponderada dos pontos médios das classes, calculada como $\hat{X} = \frac{\sum_{i=1}^{k} f_{i} x_{i}}{n}$.
+\end{itemize}
+\vskip0.3cm
+
 
 \subsection{Coeficiente de Variação (CV)}
 
@@ -1206,7 +1229,7 @@ Devido ser um número adimensional permite a comparação de séries de variáve
     CV= \left[ \frac{S}{\bar{X}} \right]*100
 \end{equation}
 
-Costuma-se usar  a seguinte interpretação para o CV:
+Costuma-se usar a seguinte interpretação para o CV:
 
 \begin{itemize}
 \item até $15\%$ variação pequena;
